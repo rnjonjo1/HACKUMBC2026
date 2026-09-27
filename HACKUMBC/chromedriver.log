@@ -1,0 +1,1043 @@
+[1790521571.684][INFO]: Starting ChromeDriver 153.0.8010.52 (78e5e45d4bb41035e17ea4da2cc257f496416ac9-refs/branch-heads/8010@{#1443}) on port 54883
+[1790521571.684][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1790521571.694][INFO]: ChromeDriver was started successfully on port 54883
+[1790521571.765][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--window-size=1280,900", "--no-sandbox", "--disable-dev-shm-usage" ],
+            "binary": "/usr/bin/chromium",
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "normal"
+      },
+      "firstMatch": [ {
+      } ]
+   }
+}
+[1790521571.765][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1790521571.766][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1790521571.766][INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
+[1790521571.766][INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
+[1790521571.766][INFO]: Launching chrome: /usr/bin/chromium --allow-pre-commit-input --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-features=IgnoreDuplicateNavs,Prewarm --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging=stderr --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/tmp/org.chromium.Chromium.scoped_dir.JHeBth --window-size=1280,900 data:,
+[1513:1513:0927/110612.453772:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to wl_shm version 1 but version 2 is available.
+[1513:1513:0927/110612.453828:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to zwp_linux_dmabuf_v1 version 4 but version 5 is available.
+[1513:1513:0927/110612.453952:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to wp_cursor_shape_manager_v1 version 1 but version 2 is available.
+[1513:1513:0927/110612.453975:WARNING:ui/ozone/platform/wayland/common/wayland_object.cc:119] Binding to zwp_pointer_gestures_v1 version 1 but version 3 is available.
+[1513:1513:0927/110612.661596:WARNING:chrome/browser/signin/account_consistency_mode_manager.cc:74] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+
+DevTools listening on ws://127.0.0.1:40651/devtools/browser/4f2b277b-4689-4632-886d-1513be2a9b03
+[1513:1513:0927/110612.741471:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:170] Server doesn't support zcr_alpha_compositing_v1.
+[1513:1513:0927/110612.741508:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:185] Server doesn't support overlay_prioritizer.
+[1513:1513:0927/110612.741515:WARNING:ui/ozone/platform/wayland/host/wayland_surface.cc:214] Server doesn't support wp_color_management_surface_v1.
+[1559:1559:0927/110612.769867:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+[1513:1513:0927/110612.834511:WARNING:ui/ozone/platform/wayland/host/org_gnome_mutter_idle_monitor.cc:87] org.gnome.Mutter.IdleMonitor D-Bus service does not exist
+[1790521572.849][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1513:1513:0927/110612.862309:WARNING:ui/base/idle/idle_linux.cc:111] None of the known D-Bus ScreenSaver services could be used.
+[1513:1513:0927/110612.869132:WARNING:components/dbus/xdg/portal.cc:126] Failed to register with org.freedesktop.host.portal.Registry
+[1790521573.016][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "153.0.8010.52",
+      "chrome": {
+         "chromedriverVersion": "153.0.8010.52 (78e5e45d4bb41035e17ea4da2cc257f496416ac9-refs/branch-heads/8010@{#1443})",
+         "userDataDir": "/tmp/org.chromium.Chromium.scoped_dir.JHeBth"
+      },
+      "fedcm:accounts": true,
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:40651"
+      },
+      "goog:processID": 1513,
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "linux",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:cmtgKey": true,
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "~~~": "..."
+   },
+   "sessionId": "2d4572b275fadffa3b4610b830c1e139"
+}
+[1790521573.018][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521573.018][INFO]: Waiting for pending navigations...
+[1790521573.019][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.480][INFO]: Waiting for pending navigations...
+[1790521573.513][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.513][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521573.514][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND AddCookie {
+   "cookie": {
+      "domain": "my.umbc.edu",
+      "httpOnly": true,
+      "name": "_myumbc_session",
+      "path": "/",
+      "secure": true,
+      "value": "dnBhJvgLEfzeJy0HvDLjHGtnROW%2FNJrqYHWWb39rm8oqUPvl4DgE%2BODdS4DP33LiNAQdk3YFcfLYORNh4%2BVKhGkHtoQWcOT1j%2Bx8Exm9PqtMMSLryf1c0o%2BacpEr%2FQ41SrT%2F%2F1aWTJgOvLBBK4W1Tdn%2BBkDEk7Kzpc4FDlM9MiVtIba50qL6Eb2ctcodAd4r2gcT2S%2FXxz7ylycCQ0UEEMKA8Ue0x%2FOuvBDSHCGSGvXuA0s8twzFFwnIfiZHVnwHXWfT9aHhXZ5Xw8wkxU6n2lp5UaCJMIujlIiE%2FmFNGAGYguh4MLbiiFf0WWWTvqv8KZ3O68%2BooiT4rFjeWlaiNNGo1nmN1IFNBJ%2BbBvrdE8zGWeakFoYZHJCjE19Cm9MnpKDzOzTCGrNwPQju1rUECa75w150icFqyKHXGOnu057Z0MQD%2Fq3%2F4u70GQ9fgkxl3XQKLi6d53BOf%2Bk5xHWeZUdABdlm8RRzAtLuE9zYb%2BctT7tne9LhFnsrk%2BRNhQcD8TmtPnmgU5vZpS1%2BTLf83LSTw7KLY%2FnEKl4usugM2wqL%2FvDwHsDSsREwLd0Chlrb7NhVtf4yknwoKXPryIE0Q9D1%2BNop7mD%2FtCZjEESltk34QPgGt947MZcTjLAgtt5pjl9M--w9%2BSnn1%2BKAdpvl2G--X3umvj%2FNsdnfsaMwBpVYWQ%3D%3D"
+   }
+}
+[1790521573.514][INFO]: Waiting for pending navigations...
+[1790521573.569][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.575][INFO]: Waiting for pending navigations...
+[1790521573.575][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.575][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE AddCookie ERROR invalid cookie domain: Cookie 'domain' mismatch
+  (Session info: chrome=153.0.8010.52)
+[1790521573.576][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND AddCookie {
+   "cookie": {
+      "domain": "my.umbc.edu",
+      "expiry": 1825078282,
+      "httpOnly": true,
+      "name": "_myumbc_agent",
+      "path": "/",
+      "secure": true,
+      "value": "ch3Sp955XJhsbXF471uhKSjKFYj5gXRe6XhdJmj7PPskym5X%2BiErN4DW60y8ZvzUzsSM86zGXITnE%2BTIv%2BM0nnjnANejEF6BWZiXKOqA6GGac1s8ozX%2BuCFF2nDmFAuf%2FRKUeG9sfaoxeiDUK8BtDU%2Fn005SrSuNcYU99R6ead4G3Ezz8J6exgPrNCYSESZw6zlfAjspDoRYV0TaLSMMQyGR%2FSn6veW9CzowbsVrvr8pY8zRiQ4EiRBYdgGqMIGYLw%3D%3D--L0Tf5R5ml2KQh2OZ--81ERDyUEY1BMUxLdheBQ1w%3D%3D"
+   }
+}
+[1790521573.577][INFO]: Waiting for pending navigations...
+[1790521573.577][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.580][INFO]: Waiting for pending navigations...
+[1790521573.581][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.581][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE AddCookie ERROR invalid cookie domain: Cookie 'domain' mismatch
+  (Session info: chrome=153.0.8010.52)
+[1790521573.582][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND AddCookie {
+   "cookie": {
+      "domain": ".umbc.edu",
+      "expiry": 1793110282,
+      "httpOnly": false,
+      "name": "umbc_roles",
+      "path": "/",
+      "secure": true,
+      "value": "undergraduate-student"
+   }
+}
+[1790521573.582][INFO]: Waiting for pending navigations...
+[1790521573.584][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.586][INFO]: Waiting for pending navigations...
+[1790521573.586][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.586][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE AddCookie
+[1790521573.587][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND AddCookie {
+   "cookie": {
+      "domain": ".umbc.edu",
+      "httpOnly": false,
+      "name": "myumbc_sso_session",
+      "path": "/",
+      "secure": true,
+      "value": "1"
+   }
+}
+[1790521573.587][INFO]: Waiting for pending navigations...
+[1790521573.590][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.592][INFO]: Waiting for pending navigations...
+[1790521573.592][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.592][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE AddCookie
+[1790521573.593][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521573.593][INFO]: Waiting for pending navigations...
+[1790521573.593][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.698][INFO]: Waiting for pending navigations...
+[1790521573.781][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.782][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521573.786][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521573.786][INFO]: Waiting for pending navigations...
+[1790521573.788][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.829][INFO]: Waiting for pending navigations...
+[1790521573.830][INFO]: Done waiting for pending navigations. Status: ok
+[1790521573.831][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521574.335][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521574.335][INFO]: Waiting for pending navigations...
+[1790521574.337][INFO]: Done waiting for pending navigations. Status: ok
+[1790521574.360][INFO]: Waiting for pending navigations...
+[1790521574.362][INFO]: Done waiting for pending navigations. Status: ok
+[1790521574.363][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521574.867][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521574.867][INFO]: Waiting for pending navigations...
+[1790521574.870][INFO]: Done waiting for pending navigations. Status: ok
+[1790521574.890][INFO]: Waiting for pending navigations...
+[1790521574.892][INFO]: Done waiting for pending navigations. Status: ok
+[1790521574.893][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521575.395][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521575.395][INFO]: Waiting for pending navigations...
+[1790521575.396][INFO]: Done waiting for pending navigations. Status: ok
+[1790521575.400][INFO]: Waiting for pending navigations...
+[1790521575.400][INFO]: Done waiting for pending navigations. Status: ok
+[1790521575.400][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1513:1542:0927/110615.568320:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[1790521575.903][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521575.903][INFO]: Waiting for pending navigations...
+[1790521575.905][INFO]: Done waiting for pending navigations. Status: ok
+[1790521575.925][INFO]: Waiting for pending navigations...
+[1790521575.928][INFO]: Done waiting for pending navigations. Status: ok
+[1790521575.928][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521576.432][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521576.432][INFO]: Waiting for pending navigations...
+[1790521576.434][INFO]: Done waiting for pending navigations. Status: ok
+[1790521576.454][INFO]: Waiting for pending navigations...
+[1790521576.456][INFO]: Done waiting for pending navigations. Status: ok
+[1790521576.456][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521576.960][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521576.960][INFO]: Waiting for pending navigations...
+[1790521576.962][INFO]: Done waiting for pending navigations. Status: ok
+[1790521576.983][INFO]: Waiting for pending navigations...
+[1790521576.985][INFO]: Done waiting for pending navigations. Status: ok
+[1790521576.985][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521577.488][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521577.489][INFO]: Waiting for pending navigations...
+[1790521577.491][INFO]: Done waiting for pending navigations. Status: ok
+[1790521577.511][INFO]: Waiting for pending navigations...
+[1790521577.513][INFO]: Done waiting for pending navigations. Status: ok
+[1790521577.514][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521578.017][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521578.017][INFO]: Waiting for pending navigations...
+[1790521578.020][INFO]: Done waiting for pending navigations. Status: ok
+[1790521578.040][INFO]: Waiting for pending navigations...
+[1790521578.042][INFO]: Done waiting for pending navigations. Status: ok
+[1790521578.042][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521578.546][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521578.546][INFO]: Waiting for pending navigations...
+[1790521578.549][INFO]: Done waiting for pending navigations. Status: ok
+[1790521578.571][INFO]: Waiting for pending navigations...
+[1790521578.573][INFO]: Done waiting for pending navigations. Status: ok
+[1790521578.573][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521579.077][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521579.078][INFO]: Waiting for pending navigations...
+[1790521579.080][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.100][INFO]: Waiting for pending navigations...
+[1790521579.102][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.102][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521579.106][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/login/umbc?url=https%3A%2F%2Fmy.umbc.edu%2Fwelcome"
+}
+[1790521579.106][INFO]: Waiting for pending navigations...
+[1790521579.108][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.250][INFO]: Waiting for pending navigations...
+[1790521579.288][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.288][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521579.289][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[id=\"username\"]"
+}
+[1790521579.289][INFO]: Waiting for pending navigations...
+[1790521579.290][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.297][INFO]: Waiting for pending navigations...
+[1790521579.297][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.297][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.40"
+}
+[1790521579.298][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[id=\"username\"]"
+}
+[1790521579.298][INFO]: Waiting for pending navigations...
+[1790521579.298][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.301][INFO]: Waiting for pending navigations...
+[1790521579.302][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.302][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.40"
+}
+[1790521579.302][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND TypeElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.40",
+   "text": "KL27697",
+   "value": [ "K", "L", "2", "7", "6", "9", "7" ]
+}
+[1790521579.302][INFO]: Waiting for pending navigations...
+[1790521579.303][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.322][INFO]: Waiting for pending navigations...
+[1790521579.323][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.323][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE TypeElement
+[1790521579.324][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[id=\"password\"]"
+}
+[1790521579.324][INFO]: Waiting for pending navigations...
+[1790521579.325][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.331][INFO]: Waiting for pending navigations...
+[1790521579.332][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.332][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.42"
+}
+[1790521579.333][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND TypeElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.42",
+   "text": "Muthoni@1245",
+   "value": [ "M", "u", "t", "h", "o", "n", "i", "@", "1", "2", "4", "5" ]
+}
+[1790521579.333][INFO]: Waiting for pending navigations...
+[1790521579.333][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.370][INFO]: Waiting for pending navigations...
+[1790521579.370][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.370][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE TypeElement
+[1790521579.371][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[id=\"submitButton\"]"
+}
+[1790521579.371][INFO]: Waiting for pending navigations...
+[1790521579.372][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.378][INFO]: Waiting for pending navigations...
+[1790521579.379][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.379][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.44"
+}
+[1790521579.380][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ClickElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.AE757DB25A3D33270BB7A4C6287300D9.e.44"
+}
+[1790521579.380][INFO]: Waiting for pending navigations...
+[1790521579.380][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.414][INFO]: Waiting for pending navigations...
+[1790521579.415][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.415][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ClickElement
+[1790521579.416][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[1]/div/div/div[1]/div[3]/button"
+}
+[1790521579.416][INFO]: Waiting for pending navigations...
+[1790521579.416][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.422][INFO]: Waiting for pending navigations...
+[1790521579.422][INFO]: Done waiting for pending navigations. Status: ok
+[1790521579.422][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div[1]/div[3]/button"}
+  (Session info: chrome=153.0.8010.52)
+[1790521579.925][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[1]/div/div/div[1]/div[3]/button"
+}
+[1790521579.925][INFO]: Waiting for pending navigations...
+[1790521582.310][INFO]: Done waiting for pending navigations. Status: ok
+[1790521582.332][INFO]: Waiting for pending navigations...
+[1790521582.332][INFO]: Done waiting for pending navigations. Status: ok
+[1790521582.332][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div[1]/div[3]/button"}
+  (Session info: chrome=153.0.8010.52)
+[1513:1513:0927/110622.569947:INFO:CONSOLE:4] "Processing event: BOOTSTRAP_COMPLETED for view index", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110622.571072:INFO:CONSOLE:4] "Event: BOOTSTRAP_COMPLETED Current view: index Next view: device_health", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110622.594423:INFO:CONSOLE:4] "Processing event: DEVICE_HEALTH_COMPLETED for view device_health", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110622.594600:INFO:CONSOLE:4] "Event: DEVICE_HEALTH_COMPLETED Current view: device_health Next view: pre_authn_eval", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1790521582.835][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[1]/div/div/div[1]/div[3]/button"
+}
+[1790521582.836][INFO]: Waiting for pending navigations...
+[1790521582.838][INFO]: Done waiting for pending navigations. Status: ok
+[1790521582.860][INFO]: Waiting for pending navigations...
+[1790521582.862][INFO]: Done waiting for pending navigations. Status: ok
+[1790521582.862][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/div[1]/div[3]/button"}
+  (Session info: chrome=153.0.8010.52)
+[1513:1513:0927/110623.031163:INFO:CONSOLE:4] "Processing event: PREAUTH_EVAL_COMPLETED for view pre_authn_eval", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110623.037417:INFO:CONSOLE:4] "Event: PREAUTH_EVAL_COMPLETED Current view: pre_authn_eval Next view: sms_otp_auth", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1790521583.366][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[1]/div/div/div[1]/div[3]/button"
+}
+[1790521583.367][INFO]: Waiting for pending navigations...
+[1790521583.369][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.386][INFO]: Waiting for pending navigations...
+[1790521583.388][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.388][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.4"
+}
+[1790521583.399][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.4"
+   } ],
+   "script": "/* isDisplayed */return ((function isShownElement(elem, optIgnoreOpacity) {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'tagName');\n    var computedStyleCache = new Map();\n    var clientRectCache = new Map();\n    var displayedCache = new Map();\n    function toUpperCaseTag(tagName) {\n        return tagName ? tagName.toUpperCase() : undefined;\n    }\n    function isElement(node, tagName) {\n        if (!node || node.nodeType !== 1) {\n            return false;\n        }\n        var asElement = node;\n        var rawTagName = tagNameDescriptor && typeof tagNameDescriptor.get === 'function'\n            ? tagNameDescriptor.get.call(asElement)\n            : asElement.tagName;\n        var upperTagName = typeof rawTagName === 'string' ? rawTagName.toUpperCase() : '';\n        var normalizedTagName = toUpperCaseTag(tagName);\n        if (upperTagName === 'FORM') {\n            return !normalizedTagName || normalizedTagName === 'FORM';\n        }\n        return !!upperTagName && (!normalizedTagName || upperTagName === normalizedTagName);\n    }\n    function getParentElement(node) {\n        var current = node.parentNode;\n        while (current &&\n            current.nodeType !== Node.ELEMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_FRAGMENT_NODE) {\n            current = current.parentNode;\n        }\n        return current && current.nodeType === 1 ? current : null;\n    }\n    function getEffectiveStyle(elem, propertyName) {\n        var computed = computedStyleCache.get(elem);\n        if (computed === undefined) {\n            var win = elem.ownerDocument.defaultView;\n            computed = win ? (win.getComputedStyle(elem) || null) : null;\n            computedStyleCache.set(elem, computed);\n        }\n        if (!computed) {\n            return null;\n        }\n        var value = computed.getPropertyValue(propertyName);\n        return value || null;\n    }\n    function getOpacity(elem) {\n        var opacityStyle = getEffectiveStyle(elem, 'opacity');\n        var opacity = opacityStyle ? Number(opacityStyle) : 1;\n        var parent = getParentElement(elem);\n        return parent ? opacity * getOpacity(parent) : opacity;\n    }\n    function getParentNodeInComposedDom(node) {\n        var parent = node.parentNode;\n        var slottable = node;\n        var parentWithShadow = parent;\n        if (parentWithShadow && parentWithShadow.shadowRoot && slottable.assignedSlot !== undefined) {\n            return slottable.assignedSlot ? slottable.assignedSlot.parentNode : null;\n        }\n        return parent;\n    }\n    function createRect(left, top, width, height) {\n        return {\n            left: left,\n            top: top,\n            right: left + width,\n            bottom: top + height,\n            width: width,\n            height: height,\n        };\n    }\n    function getClientRect(elem) {\n        var cachedRect = clientRectCache.get(elem);\n        if (cachedRect) {\n            return cachedRect;\n        }\n        var rect;\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            rect = imageMap.rect;\n        }\n        else {\n            var elemTagName = typeof elem.tagName === 'string' ? elem.tagName : '';\n            if (elemTagName.toUpperCase() === 'HTML') {\n                var doc = elem.ownerDocument;\n                var sizeElem = doc.compatMode === 'CSS1Compat' ? doc.documentElement : (doc.body || doc.documentElement);\n                rect = createRect(0, 0, sizeElem.clientWidth, sizeElem.clientHeight);\n            }\n            else {\n                try {\n                    var nativeRect = elem.getBoundingClientRect();\n                    rect = {\n                        left: nativeRect.left,\n                        top: nativeRect.top,\n                        right: nativeRect.right,\n                        bottom: nativeRect.bottom,\n                        width: nativeRect.right - nativeRect.left,\n                        height: nativeRect.bottom - nativeRect.top,\n                    };\n                }\n                catch (_error) {\n                    rect = createRect(0, 0, 0, 0);\n                }\n            }\n        }\n        clientRectCache.set(elem, rect);\n        return rect;\n    }\n    function getAreaRelativeRect(area) {\n        var shape = area.shape.toLowerCase();\n        var coords = area.coords.split(',').map(function (value) {\n            return Number(value.trim());\n        });\n        if (shape === 'rect' && coords.length === 4) {\n            return createRect(coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1]);\n        }\n        if (shape === 'circle' && coords.length === 3) {\n            return createRect(coords[0] - coords[2], coords[1] - coords[2], coords[2] * 2, coords[2] * 2);\n        }\n        if (shape === 'poly' && coords.length > 2) {\n            var minX = coords[0];\n            var minY = coords[1];\n            var maxX = minX;\n            var maxY = minY;\n            for (var index = 2; index + 1 \u003C coords.length; index += 2) {\n                minX = Math.min(minX, coords[index]);\n                maxX = Math.max(maxX, coords[index]);\n                minY = Math.min(minY, coords[index + 1]);\n                maxY = Math.max(maxY, coords[index + 1]);\n            }\n            return createRect(minX, minY, maxX - minX, maxY - minY);\n        }\n        return createRect(0, 0, 0, 0);\n    }\n    function findImageUsingMap(mapName, doc) {\n        return doc.querySelector('[usemap=\"#' + mapName.replace(/\\\\/g, '\\\\\\\\').replace(/\"/g, '\\\\\"') + '\"]');\n    }\n    function maybeFindImageMap(elem) {\n        var isMap = isElement(elem, 'MAP');\n        if (!isMap && !isElement(elem, 'AREA')) {\n            return null;\n        }\n        var map = isMap ? elem : isElement(elem.parentNode, 'MAP') ? elem.parentNode : null;\n        var image = null;\n        var rect = createRect(0, 0, 0, 0);\n        if (isElement(map, 'MAP') && map.name) {\n            image = findImageUsingMap(map.name, map.ownerDocument);\n            if (image) {\n                rect = getClientRect(image);\n                if (!isMap && isElement(elem, 'AREA') && elem.shape.toLowerCase() !== 'default') {\n                    var relativeRect = getAreaRelativeRect(elem);\n                    var relativeX = Math.min(Math.max(relativeRect.left, 0), rect.width);\n                    var relativeY = Math.min(Math.max(relativeRect.top, 0), rect.height);\n                    var width = Math.min(relativeRect.width, rect.width - relativeX);\n                    var height = Math.min(relativeRect.height, rect.height - relativeY);\n                    rect = createRect(relativeX + rect.left, relativeY + rect.top, width, height);\n                }\n            }\n        }\n        return { image: image, rect: rect };\n    }\n    function getClientRegion(elem) {\n        return getClientRect(elem);\n    }\n    function getOverflowState(elem) {\n        var region = getClientRegion(elem);\n        var ownerDoc = elem.ownerDocument;\n        var htmlElem = ownerDoc.documentElement;\n        var bodyElem = ownerDoc.body;\n        var htmlOverflowStyle = getEffectiveStyle(htmlElem, 'overflow') || 'visible';\n        var treatAsFixedPosition = false;\n        function canBeOverflowed(container, position) {\n            if (container === htmlElem) {\n                return true;\n            }\n            var display = getEffectiveStyle(container, 'display') || '';\n            if (display.indexOf('inline') === 0 || display === 'contents') {\n                return false;\n            }\n            if (position === 'absolute' && getEffectiveStyle(container, 'position') === 'static') {\n                return false;\n            }\n            return true;\n        }\n        function getOverflowParent(current) {\n            var position = getEffectiveStyle(current, 'position');\n            if (position === 'fixed') {\n                treatAsFixedPosition = true;\n                return current === htmlElem ? null : htmlElem;\n            }\n            var parent = getParentElement(current);\n            while (parent && !canBeOverflowed(parent, position)) {\n                parent = getParentElement(parent);\n            }\n            return parent;\n        }\n        function getOverflowStyles(current) {\n            var overflowElem = current;\n            if (htmlOverflowStyle === 'visible') {\n                if (current === htmlElem && bodyElem) {\n                    overflowElem = bodyElem;\n                }\n                else if (current === bodyElem) {\n                    return { x: 'visible', y: 'visible' };\n                }\n            }\n            var overflow = {\n                x: getEffectiveStyle(overflowElem, 'overflow-x') || 'visible',\n                y: getEffectiveStyle(overflowElem, 'overflow-y') || 'visible',\n            };\n            if (current === htmlElem) {\n                overflow.x = overflow.x === 'visible' ? 'auto' : overflow.x;\n                overflow.y = overflow.y === 'visible' ? 'auto' : overflow.y;\n            }\n            return overflow;\n        }\n        function getScroll(current) {\n            if (current === htmlElem) {\n                return {\n                    x: ownerDoc.defaultView ? ownerDoc.defaultView.pageXOffset : 0,\n                    y: ownerDoc.defaultView ? ownerDoc.defaultView.pageYOffset : 0,\n                };\n            }\n            return { x: current.scrollLeft, y: current.scrollTop };\n        }\n        for (var container = getOverflowParent(elem); container; container = getOverflowParent(container)) {\n            var containerOverflow = getOverflowStyles(container);\n            if (containerOverflow.x === 'visible' && containerOverflow.y === 'visible') {\n                continue;\n            }\n            var containerRect = getClientRect(container);\n            if (containerRect.width === 0 || containerRect.height === 0) {\n                return 'hidden';\n            }\n            var underflowsX = region.right \u003C containerRect.left;\n            var underflowsY = region.bottom \u003C containerRect.top;\n            if ((underflowsX && containerOverflow.x === 'hidden') || (underflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((underflowsX && containerOverflow.x !== 'visible') || (underflowsY && containerOverflow.y !== 'visible')) {\n                var containerScroll = getScroll(container);\n                var unscrollableX = region.right \u003C containerRect.left - containerScroll.x;\n                var unscrollableY = region.bottom \u003C containerRect.top - containerScroll.y;\n                if ((unscrollableX && containerOverflow.x !== 'visible') || (unscrollableY && containerOverflow.y !== 'visible')) {\n                    return 'hidden';\n                }\n                var containerUnderflowState = getOverflowState(container);\n                return containerUnderflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n            var overflowsX = region.left >= containerRect.left + containerRect.width;\n            var overflowsY = region.top >= containerRect.top + containerRect.height;\n            if ((overflowsX && containerOverflow.x === 'hidden') || (overflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((overflowsX && containerOverflow.x !== 'visible') || (overflowsY && containerOverflow.y !== 'visible')) {\n                if (treatAsFixedPosition) {\n                    var docScroll = getScroll(container);\n                    if (region.left >= htmlElem.scrollWidth - docScroll.x || region.right >= htmlElem.scrollHeight - docScroll.y) {\n                        return 'hidden';\n                    }\n                }\n                var containerOverflowState = getOverflowState(container);\n                return containerOverflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n        }\n        return 'none';\n    }\n    function isShownInternal(elem, ignoreOpacity, displayedFn) {\n        if (!isElement(elem)) {\n            throw new Error('Argument to isShown must be of type Element');\n        }\n        if (isElement(elem, 'BODY')) {\n            return true;\n        }\n        if (isElement(elem, 'OPTION') || isElement(elem, 'OPTGROUP')) {\n            var select = elem.closest('select');\n            return !!select && isShownInternal(select, true, displayedFn);\n        }\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            return !!imageMap.image && imageMap.rect.width > 0 && imageMap.rect.height > 0 &&\n                isShownInternal(imageMap.image, ignoreOpacity, displayedFn);\n        }\n        if (isElement(elem, 'INPUT') && elem.type.toLowerCase() === 'hidden') {\n            return false;\n        }\n        if (isElement(elem, 'NOSCRIPT')) {\n            return false;\n        }\n        var visibility = getEffectiveStyle(elem, 'visibility');\n        if (visibility === 'collapse' || visibility === 'hidden') {\n            return false;\n        }\n        if (!displayedFn(elem)) {\n            return false;\n        }\n        if (!ignoreOpacity && getOpacity(elem) === 0) {\n            return false;\n        }\n        function positiveSize(element) {\n            var rect = getClientRect(element);\n            if (rect.height > 0 && rect.width > 0) {\n                return true;\n            }\n            if (isElement(element, 'PATH') && (rect.height > 0 || rect.width > 0)) {\n                var strokeWidth = getEffectiveStyle(element, 'stroke-width');\n                return !!strokeWidth && parseInt(strokeWidth, 10) > 0;\n            }\n            var elementVisibility = getEffectiveStyle(element, 'visibility');\n            if (elementVisibility === 'collapse' || elementVisibility === 'hidden') {\n                return false;\n            }\n            if (!displayedFn(element)) {\n                return false;\n            }\n            if (getEffectiveStyle(element, 'overflow') === 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (child.nodeType === Node.TEXT_NODE) {\n                    var text = child.nodeValue || '';\n                    if (/^[\\s]*$/.test(text) && /[\\n\\r\\t]/.test(text)) {\n                        continue;\n                    }\n                    return true;\n                }\n                if (isElement(child) && positiveSize(child)) {\n                    return true;\n                }\n            }\n            return false;\n        }\n        if (!positiveSize(elem)) {\n            return false;\n        }\n        function hiddenByOverflow(element) {\n            if (getOverflowState(element) !== 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (isElement(child) && !hiddenByOverflow(child) && positiveSize(child)) {\n                    return false;\n                }\n            }\n            return true;\n        }\n        return !hiddenByOverflow(elem);\n    }\n    function displayed(node) {\n        var cached = displayedCache.get(node);\n        if (cached !== undefined) {\n            return cached;\n        }\n        if (isElement(node)) {\n            var display = getEffectiveStyle(node, 'display');\n            var contentVisibility = getEffectiveStyle(node, 'content-visibility');\n            if (display === 'none' || contentVisibility === 'hidden') {\n                displayedCache.set(node, false);\n                return false;\n            }\n        }\n        var parent = getParentNodeInComposedDom(node);\n        if (typeof ShadowRoot === 'function' && parent instanceof ShadowRoot) {\n            if (parent.host.shadowRoot && parent.host.shadowRoot !== parent) {\n                displayedCache.set(node, false);\n                return false;\n            }\n            parent = parent.host;\n        }\n        if (parent && (parent.nodeType === Node.DOCUMENT_NODE || parent.nodeType === Node.DOCUMENT_FRAGMENT_NODE)) {\n            displayedCache.set(node, true);\n            return true;\n        }\n        if (isElement(parent, 'DETAILS') && !parent.open && !isElement(node, 'SUMMARY')) {\n            displayedCache.set(node, false);\n            return false;\n        }\n        var result = !!parent && displayed(parent);\n        displayedCache.set(node, result);\n        return result;\n    }\n    return isShownInternal(elem, !!optIgnoreOpacity, displayed);\n})).apply(null, arguments);"
+}
+[1790521583.400][INFO]: Waiting for pending navigations...
+[1790521583.402][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.428][INFO]: Waiting for pending navigations...
+[1790521583.431][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.431][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ExecuteScript true
+[1790521583.434][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND IsElementEnabled {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.4"
+}
+[1790521583.434][INFO]: Waiting for pending navigations...
+[1790521583.436][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.454][INFO]: Waiting for pending navigations...
+[1790521583.456][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.456][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE IsElementEnabled true
+[1790521583.459][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ClickElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.4"
+}
+[1790521583.460][INFO]: Waiting for pending navigations...
+[1790521583.462][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.563][INFO]: Waiting for pending navigations...
+[1790521583.567][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.567][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ClickElement
+[1790521583.568][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[id=\"passcode-input\"]"
+}
+[1790521583.568][INFO]: Waiting for pending navigations...
+[1790521583.568][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.575][INFO]: Waiting for pending navigations...
+[1790521583.575][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.575][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.5"
+}
+[1790521583.576][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.5"
+   } ],
+   "script": "/* isDisplayed */return ((function isShownElement(elem, optIgnoreOpacity) {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'tagName');\n    var computedStyleCache = new Map();\n    var clientRectCache = new Map();\n    var displayedCache = new Map();\n    function toUpperCaseTag(tagName) {\n        return tagName ? tagName.toUpperCase() : undefined;\n    }\n    function isElement(node, tagName) {\n        if (!node || node.nodeType !== 1) {\n            return false;\n        }\n        var asElement = node;\n        var rawTagName = tagNameDescriptor && typeof tagNameDescriptor.get === 'function'\n            ? tagNameDescriptor.get.call(asElement)\n            : asElement.tagName;\n        var upperTagName = typeof rawTagName === 'string' ? rawTagName.toUpperCase() : '';\n        var normalizedTagName = toUpperCaseTag(tagName);\n        if (upperTagName === 'FORM') {\n            return !normalizedTagName || normalizedTagName === 'FORM';\n        }\n        return !!upperTagName && (!normalizedTagName || upperTagName === normalizedTagName);\n    }\n    function getParentElement(node) {\n        var current = node.parentNode;\n        while (current &&\n            current.nodeType !== Node.ELEMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_FRAGMENT_NODE) {\n            current = current.parentNode;\n        }\n        return current && current.nodeType === 1 ? current : null;\n    }\n    function getEffectiveStyle(elem, propertyName) {\n        var computed = computedStyleCache.get(elem);\n        if (computed === undefined) {\n            var win = elem.ownerDocument.defaultView;\n            computed = win ? (win.getComputedStyle(elem) || null) : null;\n            computedStyleCache.set(elem, computed);\n        }\n        if (!computed) {\n            return null;\n        }\n        var value = computed.getPropertyValue(propertyName);\n        return value || null;\n    }\n    function getOpacity(elem) {\n        var opacityStyle = getEffectiveStyle(elem, 'opacity');\n        var opacity = opacityStyle ? Number(opacityStyle) : 1;\n        var parent = getParentElement(elem);\n        return parent ? opacity * getOpacity(parent) : opacity;\n    }\n    function getParentNodeInComposedDom(node) {\n        var parent = node.parentNode;\n        var slottable = node;\n        var parentWithShadow = parent;\n        if (parentWithShadow && parentWithShadow.shadowRoot && slottable.assignedSlot !== undefined) {\n            return slottable.assignedSlot ? slottable.assignedSlot.parentNode : null;\n        }\n        return parent;\n    }\n    function createRect(left, top, width, height) {\n        return {\n            left: left,\n            top: top,\n            right: left + width,\n            bottom: top + height,\n            width: width,\n            height: height,\n        };\n    }\n    function getClientRect(elem) {\n        var cachedRect = clientRectCache.get(elem);\n        if (cachedRect) {\n            return cachedRect;\n        }\n        var rect;\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            rect = imageMap.rect;\n        }\n        else {\n            var elemTagName = typeof elem.tagName === 'string' ? elem.tagName : '';\n            if (elemTagName.toUpperCase() === 'HTML') {\n                var doc = elem.ownerDocument;\n                var sizeElem = doc.compatMode === 'CSS1Compat' ? doc.documentElement : (doc.body || doc.documentElement);\n                rect = createRect(0, 0, sizeElem.clientWidth, sizeElem.clientHeight);\n            }\n            else {\n                try {\n                    var nativeRect = elem.getBoundingClientRect();\n                    rect = {\n                        left: nativeRect.left,\n                        top: nativeRect.top,\n                        right: nativeRect.right,\n                        bottom: nativeRect.bottom,\n                        width: nativeRect.right - nativeRect.left,\n                        height: nativeRect.bottom - nativeRect.top,\n                    };\n                }\n                catch (_error) {\n                    rect = createRect(0, 0, 0, 0);\n                }\n            }\n        }\n        clientRectCache.set(elem, rect);\n        return rect;\n    }\n    function getAreaRelativeRect(area) {\n        var shape = area.shape.toLowerCase();\n        var coords = area.coords.split(',').map(function (value) {\n            return Number(value.trim());\n        });\n        if (shape === 'rect' && coords.length === 4) {\n            return createRect(coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1]);\n        }\n        if (shape === 'circle' && coords.length === 3) {\n            return createRect(coords[0] - coords[2], coords[1] - coords[2], coords[2] * 2, coords[2] * 2);\n        }\n        if (shape === 'poly' && coords.length > 2) {\n            var minX = coords[0];\n            var minY = coords[1];\n            var maxX = minX;\n            var maxY = minY;\n            for (var index = 2; index + 1 \u003C coords.length; index += 2) {\n                minX = Math.min(minX, coords[index]);\n                maxX = Math.max(maxX, coords[index]);\n                minY = Math.min(minY, coords[index + 1]);\n                maxY = Math.max(maxY, coords[index + 1]);\n            }\n            return createRect(minX, minY, maxX - minX, maxY - minY);\n        }\n        return createRect(0, 0, 0, 0);\n    }\n    function findImageUsingMap(mapName, doc) {\n        return doc.querySelector('[usemap=\"#' + mapName.replace(/\\\\/g, '\\\\\\\\').replace(/\"/g, '\\\\\"') + '\"]');\n    }\n    function maybeFindImageMap(elem) {\n        var isMap = isElement(elem, 'MAP');\n        if (!isMap && !isElement(elem, 'AREA')) {\n            return null;\n        }\n        var map = isMap ? elem : isElement(elem.parentNode, 'MAP') ? elem.parentNode : null;\n        var image = null;\n        var rect = createRect(0, 0, 0, 0);\n        if (isElement(map, 'MAP') && map.name) {\n            image = findImageUsingMap(map.name, map.ownerDocument);\n            if (image) {\n                rect = getClientRect(image);\n                if (!isMap && isElement(elem, 'AREA') && elem.shape.toLowerCase() !== 'default') {\n                    var relativeRect = getAreaRelativeRect(elem);\n                    var relativeX = Math.min(Math.max(relativeRect.left, 0), rect.width);\n                    var relativeY = Math.min(Math.max(relativeRect.top, 0), rect.height);\n                    var width = Math.min(relativeRect.width, rect.width - relativeX);\n                    var height = Math.min(relativeRect.height, rect.height - relativeY);\n                    rect = createRect(relativeX + rect.left, relativeY + rect.top, width, height);\n                }\n            }\n        }\n        return { image: image, rect: rect };\n    }\n    function getClientRegion(elem) {\n        return getClientRect(elem);\n    }\n    function getOverflowState(elem) {\n        var region = getClientRegion(elem);\n        var ownerDoc = elem.ownerDocument;\n        var htmlElem = ownerDoc.documentElement;\n        var bodyElem = ownerDoc.body;\n        var htmlOverflowStyle = getEffectiveStyle(htmlElem, 'overflow') || 'visible';\n        var treatAsFixedPosition = false;\n        function canBeOverflowed(container, position) {\n            if (container === htmlElem) {\n                return true;\n            }\n            var display = getEffectiveStyle(container, 'display') || '';\n            if (display.indexOf('inline') === 0 || display === 'contents') {\n                return false;\n            }\n            if (position === 'absolute' && getEffectiveStyle(container, 'position') === 'static') {\n                return false;\n            }\n            return true;\n        }\n        function getOverflowParent(current) {\n            var position = getEffectiveStyle(current, 'position');\n            if (position === 'fixed') {\n                treatAsFixedPosition = true;\n                return current === htmlElem ? null : htmlElem;\n            }\n            var parent = getParentElement(current);\n            while (parent && !canBeOverflowed(parent, position)) {\n                parent = getParentElement(parent);\n            }\n            return parent;\n        }\n        function getOverflowStyles(current) {\n            var overflowElem = current;\n            if (htmlOverflowStyle === 'visible') {\n                if (current === htmlElem && bodyElem) {\n                    overflowElem = bodyElem;\n                }\n                else if (current === bodyElem) {\n                    return { x: 'visible', y: 'visible' };\n                }\n            }\n            var overflow = {\n                x: getEffectiveStyle(overflowElem, 'overflow-x') || 'visible',\n                y: getEffectiveStyle(overflowElem, 'overflow-y') || 'visible',\n            };\n            if (current === htmlElem) {\n                overflow.x = overflow.x === 'visible' ? 'auto' : overflow.x;\n                overflow.y = overflow.y === 'visible' ? 'auto' : overflow.y;\n            }\n            return overflow;\n        }\n        function getScroll(current) {\n            if (current === htmlElem) {\n                return {\n                    x: ownerDoc.defaultView ? ownerDoc.defaultView.pageXOffset : 0,\n                    y: ownerDoc.defaultView ? ownerDoc.defaultView.pageYOffset : 0,\n                };\n            }\n            return { x: current.scrollLeft, y: current.scrollTop };\n        }\n        for (var container = getOverflowParent(elem); container; container = getOverflowParent(container)) {\n            var containerOverflow = getOverflowStyles(container);\n            if (containerOverflow.x === 'visible' && containerOverflow.y === 'visible') {\n                continue;\n            }\n            var containerRect = getClientRect(container);\n            if (containerRect.width === 0 || containerRect.height === 0) {\n                return 'hidden';\n            }\n            var underflowsX = region.right \u003C containerRect.left;\n            var underflowsY = region.bottom \u003C containerRect.top;\n            if ((underflowsX && containerOverflow.x === 'hidden') || (underflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((underflowsX && containerOverflow.x !== 'visible') || (underflowsY && containerOverflow.y !== 'visible')) {\n                var containerScroll = getScroll(container);\n                var unscrollableX = region.right \u003C containerRect.left - containerScroll.x;\n                var unscrollableY = region.bottom \u003C containerRect.top - containerScroll.y;\n                if ((unscrollableX && containerOverflow.x !== 'visible') || (unscrollableY && containerOverflow.y !== 'visible')) {\n                    return 'hidden';\n                }\n                var containerUnderflowState = getOverflowState(container);\n                return containerUnderflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n            var overflowsX = region.left >= containerRect.left + containerRect.width;\n            var overflowsY = region.top >= containerRect.top + containerRect.height;\n            if ((overflowsX && containerOverflow.x === 'hidden') || (overflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((overflowsX && containerOverflow.x !== 'visible') || (overflowsY && containerOverflow.y !== 'visible')) {\n                if (treatAsFixedPosition) {\n                    var docScroll = getScroll(container);\n                    if (region.left >= htmlElem.scrollWidth - docScroll.x || region.right >= htmlElem.scrollHeight - docScroll.y) {\n                        return 'hidden';\n                    }\n                }\n                var containerOverflowState = getOverflowState(container);\n                return containerOverflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n        }\n        return 'none';\n    }\n    function isShownInternal(elem, ignoreOpacity, displayedFn) {\n        if (!isElement(elem)) {\n            throw new Error('Argument to isShown must be of type Element');\n        }\n        if (isElement(elem, 'BODY')) {\n            return true;\n        }\n        if (isElement(elem, 'OPTION') || isElement(elem, 'OPTGROUP')) {\n            var select = elem.closest('select');\n            return !!select && isShownInternal(select, true, displayedFn);\n        }\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            return !!imageMap.image && imageMap.rect.width > 0 && imageMap.rect.height > 0 &&\n                isShownInternal(imageMap.image, ignoreOpacity, displayedFn);\n        }\n        if (isElement(elem, 'INPUT') && elem.type.toLowerCase() === 'hidden') {\n            return false;\n        }\n        if (isElement(elem, 'NOSCRIPT')) {\n            return false;\n        }\n        var visibility = getEffectiveStyle(elem, 'visibility');\n        if (visibility === 'collapse' || visibility === 'hidden') {\n            return false;\n        }\n        if (!displayedFn(elem)) {\n            return false;\n        }\n        if (!ignoreOpacity && getOpacity(elem) === 0) {\n            return false;\n        }\n        function positiveSize(element) {\n            var rect = getClientRect(element);\n            if (rect.height > 0 && rect.width > 0) {\n                return true;\n            }\n            if (isElement(element, 'PATH') && (rect.height > 0 || rect.width > 0)) {\n                var strokeWidth = getEffectiveStyle(element, 'stroke-width');\n                return !!strokeWidth && parseInt(strokeWidth, 10) > 0;\n            }\n            var elementVisibility = getEffectiveStyle(element, 'visibility');\n            if (elementVisibility === 'collapse' || elementVisibility === 'hidden') {\n                return false;\n            }\n            if (!displayedFn(element)) {\n                return false;\n            }\n            if (getEffectiveStyle(element, 'overflow') === 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (child.nodeType === Node.TEXT_NODE) {\n                    var text = child.nodeValue || '';\n                    if (/^[\\s]*$/.test(text) && /[\\n\\r\\t]/.test(text)) {\n                        continue;\n                    }\n                    return true;\n                }\n                if (isElement(child) && positiveSize(child)) {\n                    return true;\n                }\n            }\n            return false;\n        }\n        if (!positiveSize(elem)) {\n            return false;\n        }\n        function hiddenByOverflow(element) {\n            if (getOverflowState(element) !== 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (isElement(child) && !hiddenByOverflow(child) && positiveSize(child)) {\n                    return false;\n                }\n            }\n            return true;\n        }\n        return !hiddenByOverflow(elem);\n    }\n    function displayed(node) {\n        var cached = displayedCache.get(node);\n        if (cached !== undefined) {\n            return cached;\n        }\n        if (isElement(node)) {\n            var display = getEffectiveStyle(node, 'display');\n            var contentVisibility = getEffectiveStyle(node, 'content-visibility');\n            if (display === 'none' || contentVisibility === 'hidden') {\n                displayedCache.set(node, false);\n                return false;\n            }\n        }\n        var parent = getParentNodeInComposedDom(node);\n        if (typeof ShadowRoot === 'function' && parent instanceof ShadowRoot) {\n            if (parent.host.shadowRoot && parent.host.shadowRoot !== parent) {\n                displayedCache.set(node, false);\n                return false;\n            }\n            parent = parent.host;\n        }\n        if (parent && (parent.nodeType === Node.DOCUMENT_NODE || parent.nodeType === Node.DOCUMENT_FRAGMENT_NODE)) {\n            displayedCache.set(node, true);\n            return true;\n        }\n        if (isElement(parent, 'DETAILS') && !parent.open && !isElement(node, 'SUMMARY')) {\n            displayedCache.set(node, false);\n            return false;\n        }\n        var result = !!parent && displayed(parent);\n        displayedCache.set(node, result);\n        return result;\n    }\n    return isShownInternal(elem, !!optIgnoreOpacity, displayed);\n})).apply(null, arguments);"
+}
+[1790521583.576][INFO]: Waiting for pending navigations...
+[1790521583.577][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.580][INFO]: Waiting for pending navigations...
+[1790521583.580][INFO]: Done waiting for pending navigations. Status: ok
+[1790521583.580][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ExecuteScript true
+[1790521593.993][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND TypeElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.5",
+   "text": "1140398",
+   "value": [ "1", "1", "4", "0", "3", "9", "8" ]
+}
+[1790521593.993][INFO]: Waiting for pending navigations...
+[1790521593.995][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.065][INFO]: Waiting for pending navigations...
+[1790521594.067][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.067][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE TypeElement
+[1790521594.068][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[1]/div/div/div[1]/div[3]/div[1]/form/div[4]/button"
+}
+[1790521594.068][INFO]: Waiting for pending navigations...
+[1790521594.069][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.075][INFO]: Waiting for pending navigations...
+[1790521594.076][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.076][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.10"
+}
+[1790521594.077][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.10"
+   } ],
+   "script": "/* isDisplayed */return ((function isShownElement(elem, optIgnoreOpacity) {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'tagName');\n    var computedStyleCache = new Map();\n    var clientRectCache = new Map();\n    var displayedCache = new Map();\n    function toUpperCaseTag(tagName) {\n        return tagName ? tagName.toUpperCase() : undefined;\n    }\n    function isElement(node, tagName) {\n        if (!node || node.nodeType !== 1) {\n            return false;\n        }\n        var asElement = node;\n        var rawTagName = tagNameDescriptor && typeof tagNameDescriptor.get === 'function'\n            ? tagNameDescriptor.get.call(asElement)\n            : asElement.tagName;\n        var upperTagName = typeof rawTagName === 'string' ? rawTagName.toUpperCase() : '';\n        var normalizedTagName = toUpperCaseTag(tagName);\n        if (upperTagName === 'FORM') {\n            return !normalizedTagName || normalizedTagName === 'FORM';\n        }\n        return !!upperTagName && (!normalizedTagName || upperTagName === normalizedTagName);\n    }\n    function getParentElement(node) {\n        var current = node.parentNode;\n        while (current &&\n            current.nodeType !== Node.ELEMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_FRAGMENT_NODE) {\n            current = current.parentNode;\n        }\n        return current && current.nodeType === 1 ? current : null;\n    }\n    function getEffectiveStyle(elem, propertyName) {\n        var computed = computedStyleCache.get(elem);\n        if (computed === undefined) {\n            var win = elem.ownerDocument.defaultView;\n            computed = win ? (win.getComputedStyle(elem) || null) : null;\n            computedStyleCache.set(elem, computed);\n        }\n        if (!computed) {\n            return null;\n        }\n        var value = computed.getPropertyValue(propertyName);\n        return value || null;\n    }\n    function getOpacity(elem) {\n        var opacityStyle = getEffectiveStyle(elem, 'opacity');\n        var opacity = opacityStyle ? Number(opacityStyle) : 1;\n        var parent = getParentElement(elem);\n        return parent ? opacity * getOpacity(parent) : opacity;\n    }\n    function getParentNodeInComposedDom(node) {\n        var parent = node.parentNode;\n        var slottable = node;\n        var parentWithShadow = parent;\n        if (parentWithShadow && parentWithShadow.shadowRoot && slottable.assignedSlot !== undefined) {\n            return slottable.assignedSlot ? slottable.assignedSlot.parentNode : null;\n        }\n        return parent;\n    }\n    function createRect(left, top, width, height) {\n        return {\n            left: left,\n            top: top,\n            right: left + width,\n            bottom: top + height,\n            width: width,\n            height: height,\n        };\n    }\n    function getClientRect(elem) {\n        var cachedRect = clientRectCache.get(elem);\n        if (cachedRect) {\n            return cachedRect;\n        }\n        var rect;\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            rect = imageMap.rect;\n        }\n        else {\n            var elemTagName = typeof elem.tagName === 'string' ? elem.tagName : '';\n            if (elemTagName.toUpperCase() === 'HTML') {\n                var doc = elem.ownerDocument;\n                var sizeElem = doc.compatMode === 'CSS1Compat' ? doc.documentElement : (doc.body || doc.documentElement);\n                rect = createRect(0, 0, sizeElem.clientWidth, sizeElem.clientHeight);\n            }\n            else {\n                try {\n                    var nativeRect = elem.getBoundingClientRect();\n                    rect = {\n                        left: nativeRect.left,\n                        top: nativeRect.top,\n                        right: nativeRect.right,\n                        bottom: nativeRect.bottom,\n                        width: nativeRect.right - nativeRect.left,\n                        height: nativeRect.bottom - nativeRect.top,\n                    };\n                }\n                catch (_error) {\n                    rect = createRect(0, 0, 0, 0);\n                }\n            }\n        }\n        clientRectCache.set(elem, rect);\n        return rect;\n    }\n    function getAreaRelativeRect(area) {\n        var shape = area.shape.toLowerCase();\n        var coords = area.coords.split(',').map(function (value) {\n            return Number(value.trim());\n        });\n        if (shape === 'rect' && coords.length === 4) {\n            return createRect(coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1]);\n        }\n        if (shape === 'circle' && coords.length === 3) {\n            return createRect(coords[0] - coords[2], coords[1] - coords[2], coords[2] * 2, coords[2] * 2);\n        }\n        if (shape === 'poly' && coords.length > 2) {\n            var minX = coords[0];\n            var minY = coords[1];\n            var maxX = minX;\n            var maxY = minY;\n            for (var index = 2; index + 1 \u003C coords.length; index += 2) {\n                minX = Math.min(minX, coords[index]);\n                maxX = Math.max(maxX, coords[index]);\n                minY = Math.min(minY, coords[index + 1]);\n                maxY = Math.max(maxY, coords[index + 1]);\n            }\n            return createRect(minX, minY, maxX - minX, maxY - minY);\n        }\n        return createRect(0, 0, 0, 0);\n    }\n    function findImageUsingMap(mapName, doc) {\n        return doc.querySelector('[usemap=\"#' + mapName.replace(/\\\\/g, '\\\\\\\\').replace(/\"/g, '\\\\\"') + '\"]');\n    }\n    function maybeFindImageMap(elem) {\n        var isMap = isElement(elem, 'MAP');\n        if (!isMap && !isElement(elem, 'AREA')) {\n            return null;\n        }\n        var map = isMap ? elem : isElement(elem.parentNode, 'MAP') ? elem.parentNode : null;\n        var image = null;\n        var rect = createRect(0, 0, 0, 0);\n        if (isElement(map, 'MAP') && map.name) {\n            image = findImageUsingMap(map.name, map.ownerDocument);\n            if (image) {\n                rect = getClientRect(image);\n                if (!isMap && isElement(elem, 'AREA') && elem.shape.toLowerCase() !== 'default') {\n                    var relativeRect = getAreaRelativeRect(elem);\n                    var relativeX = Math.min(Math.max(relativeRect.left, 0), rect.width);\n                    var relativeY = Math.min(Math.max(relativeRect.top, 0), rect.height);\n                    var width = Math.min(relativeRect.width, rect.width - relativeX);\n                    var height = Math.min(relativeRect.height, rect.height - relativeY);\n                    rect = createRect(relativeX + rect.left, relativeY + rect.top, width, height);\n                }\n            }\n        }\n        return { image: image, rect: rect };\n    }\n    function getClientRegion(elem) {\n        return getClientRect(elem);\n    }\n    function getOverflowState(elem) {\n        var region = getClientRegion(elem);\n        var ownerDoc = elem.ownerDocument;\n        var htmlElem = ownerDoc.documentElement;\n        var bodyElem = ownerDoc.body;\n        var htmlOverflowStyle = getEffectiveStyle(htmlElem, 'overflow') || 'visible';\n        var treatAsFixedPosition = false;\n        function canBeOverflowed(container, position) {\n            if (container === htmlElem) {\n                return true;\n            }\n            var display = getEffectiveStyle(container, 'display') || '';\n            if (display.indexOf('inline') === 0 || display === 'contents') {\n                return false;\n            }\n            if (position === 'absolute' && getEffectiveStyle(container, 'position') === 'static') {\n                return false;\n            }\n            return true;\n        }\n        function getOverflowParent(current) {\n            var position = getEffectiveStyle(current, 'position');\n            if (position === 'fixed') {\n                treatAsFixedPosition = true;\n                return current === htmlElem ? null : htmlElem;\n            }\n            var parent = getParentElement(current);\n            while (parent && !canBeOverflowed(parent, position)) {\n                parent = getParentElement(parent);\n            }\n            return parent;\n        }\n        function getOverflowStyles(current) {\n            var overflowElem = current;\n            if (htmlOverflowStyle === 'visible') {\n                if (current === htmlElem && bodyElem) {\n                    overflowElem = bodyElem;\n                }\n                else if (current === bodyElem) {\n                    return { x: 'visible', y: 'visible' };\n                }\n            }\n            var overflow = {\n                x: getEffectiveStyle(overflowElem, 'overflow-x') || 'visible',\n                y: getEffectiveStyle(overflowElem, 'overflow-y') || 'visible',\n            };\n            if (current === htmlElem) {\n                overflow.x = overflow.x === 'visible' ? 'auto' : overflow.x;\n                overflow.y = overflow.y === 'visible' ? 'auto' : overflow.y;\n            }\n            return overflow;\n        }\n        function getScroll(current) {\n            if (current === htmlElem) {\n                return {\n                    x: ownerDoc.defaultView ? ownerDoc.defaultView.pageXOffset : 0,\n                    y: ownerDoc.defaultView ? ownerDoc.defaultView.pageYOffset : 0,\n                };\n            }\n            return { x: current.scrollLeft, y: current.scrollTop };\n        }\n        for (var container = getOverflowParent(elem); container; container = getOverflowParent(container)) {\n            var containerOverflow = getOverflowStyles(container);\n            if (containerOverflow.x === 'visible' && containerOverflow.y === 'visible') {\n                continue;\n            }\n            var containerRect = getClientRect(container);\n            if (containerRect.width === 0 || containerRect.height === 0) {\n                return 'hidden';\n            }\n            var underflowsX = region.right \u003C containerRect.left;\n            var underflowsY = region.bottom \u003C containerRect.top;\n            if ((underflowsX && containerOverflow.x === 'hidden') || (underflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((underflowsX && containerOverflow.x !== 'visible') || (underflowsY && containerOverflow.y !== 'visible')) {\n                var containerScroll = getScroll(container);\n                var unscrollableX = region.right \u003C containerRect.left - containerScroll.x;\n                var unscrollableY = region.bottom \u003C containerRect.top - containerScroll.y;\n                if ((unscrollableX && containerOverflow.x !== 'visible') || (unscrollableY && containerOverflow.y !== 'visible')) {\n                    return 'hidden';\n                }\n                var containerUnderflowState = getOverflowState(container);\n                return containerUnderflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n            var overflowsX = region.left >= containerRect.left + containerRect.width;\n            var overflowsY = region.top >= containerRect.top + containerRect.height;\n            if ((overflowsX && containerOverflow.x === 'hidden') || (overflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((overflowsX && containerOverflow.x !== 'visible') || (overflowsY && containerOverflow.y !== 'visible')) {\n                if (treatAsFixedPosition) {\n                    var docScroll = getScroll(container);\n                    if (region.left >= htmlElem.scrollWidth - docScroll.x || region.right >= htmlElem.scrollHeight - docScroll.y) {\n                        return 'hidden';\n                    }\n                }\n                var containerOverflowState = getOverflowState(container);\n                return containerOverflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n        }\n        return 'none';\n    }\n    function isShownInternal(elem, ignoreOpacity, displayedFn) {\n        if (!isElement(elem)) {\n            throw new Error('Argument to isShown must be of type Element');\n        }\n        if (isElement(elem, 'BODY')) {\n            return true;\n        }\n        if (isElement(elem, 'OPTION') || isElement(elem, 'OPTGROUP')) {\n            var select = elem.closest('select');\n            return !!select && isShownInternal(select, true, displayedFn);\n        }\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            return !!imageMap.image && imageMap.rect.width > 0 && imageMap.rect.height > 0 &&\n                isShownInternal(imageMap.image, ignoreOpacity, displayedFn);\n        }\n        if (isElement(elem, 'INPUT') && elem.type.toLowerCase() === 'hidden') {\n            return false;\n        }\n        if (isElement(elem, 'NOSCRIPT')) {\n            return false;\n        }\n        var visibility = getEffectiveStyle(elem, 'visibility');\n        if (visibility === 'collapse' || visibility === 'hidden') {\n            return false;\n        }\n        if (!displayedFn(elem)) {\n            return false;\n        }\n        if (!ignoreOpacity && getOpacity(elem) === 0) {\n            return false;\n        }\n        function positiveSize(element) {\n            var rect = getClientRect(element);\n            if (rect.height > 0 && rect.width > 0) {\n                return true;\n            }\n            if (isElement(element, 'PATH') && (rect.height > 0 || rect.width > 0)) {\n                var strokeWidth = getEffectiveStyle(element, 'stroke-width');\n                return !!strokeWidth && parseInt(strokeWidth, 10) > 0;\n            }\n            var elementVisibility = getEffectiveStyle(element, 'visibility');\n            if (elementVisibility === 'collapse' || elementVisibility === 'hidden') {\n                return false;\n            }\n            if (!displayedFn(element)) {\n                return false;\n            }\n            if (getEffectiveStyle(element, 'overflow') === 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (child.nodeType === Node.TEXT_NODE) {\n                    var text = child.nodeValue || '';\n                    if (/^[\\s]*$/.test(text) && /[\\n\\r\\t]/.test(text)) {\n                        continue;\n                    }\n                    return true;\n                }\n                if (isElement(child) && positiveSize(child)) {\n                    return true;\n                }\n            }\n            return false;\n        }\n        if (!positiveSize(elem)) {\n            return false;\n        }\n        function hiddenByOverflow(element) {\n            if (getOverflowState(element) !== 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (isElement(child) && !hiddenByOverflow(child) && positiveSize(child)) {\n                    return false;\n                }\n            }\n            return true;\n        }\n        return !hiddenByOverflow(elem);\n    }\n    function displayed(node) {\n        var cached = displayedCache.get(node);\n        if (cached !== undefined) {\n            return cached;\n        }\n        if (isElement(node)) {\n            var display = getEffectiveStyle(node, 'display');\n            var contentVisibility = getEffectiveStyle(node, 'content-visibility');\n            if (display === 'none' || contentVisibility === 'hidden') {\n                displayedCache.set(node, false);\n                return false;\n            }\n        }\n        var parent = getParentNodeInComposedDom(node);\n        if (typeof ShadowRoot === 'function' && parent instanceof ShadowRoot) {\n            if (parent.host.shadowRoot && parent.host.shadowRoot !== parent) {\n                displayedCache.set(node, false);\n                return false;\n            }\n            parent = parent.host;\n        }\n        if (parent && (parent.nodeType === Node.DOCUMENT_NODE || parent.nodeType === Node.DOCUMENT_FRAGMENT_NODE)) {\n            displayedCache.set(node, true);\n            return true;\n        }\n        if (isElement(parent, 'DETAILS') && !parent.open && !isElement(node, 'SUMMARY')) {\n            displayedCache.set(node, false);\n            return false;\n        }\n        var result = !!parent && displayed(parent);\n        displayedCache.set(node, result);\n        return result;\n    }\n    return isShownInternal(elem, !!optIgnoreOpacity, displayed);\n})).apply(null, arguments);"
+}
+[1790521594.077][INFO]: Waiting for pending navigations...
+[1790521594.077][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.080][INFO]: Waiting for pending navigations...
+[1790521594.081][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.081][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ExecuteScript true
+[1790521594.081][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND IsElementEnabled {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.10"
+}
+[1790521594.081][INFO]: Waiting for pending navigations...
+[1790521594.082][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.084][INFO]: Waiting for pending navigations...
+[1790521594.084][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.084][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE IsElementEnabled true
+[1790521594.084][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.10"
+   } ],
+   "script": "arguments[0].click();"
+}
+[1790521594.084][INFO]: Waiting for pending navigations...
+[1790521594.085][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.095][INFO]: Waiting for pending navigations...
+[1790521594.095][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.095][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ExecuteScript null
+[1790521594.096][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"pwl-prompt-root\"]/div/div/div[1]/div[3]/button"
+}
+[1790521594.096][INFO]: Waiting for pending navigations...
+[1790521594.097][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.103][INFO]: Waiting for pending navigations...
+[1790521594.103][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.103][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="pwl-prompt-root"]/div/div/div[1]/div[3]/button"}
+  (Session info: chrome=153.0.8010.52)
+[1513:1513:0927/110634.487956:INFO:CONSOLE:4] "Processing event: LEE_PERFORMED_AUTH for view sms_otp_auth", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110634.489043:INFO:CONSOLE:4] "Event: LEE_PERFORMED_AUTH Current view: sms_otp_auth Next view: browser_trust", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1790521594.606][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"pwl-prompt-root\"]/div/div/div[1]/div[3]/button"
+}
+[1790521594.607][INFO]: Waiting for pending navigations...
+[1790521594.609][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.625][INFO]: Waiting for pending navigations...
+[1790521594.627][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.628][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.37"
+}
+[1790521594.633][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.37"
+   } ],
+   "script": "/* isDisplayed */return ((function isShownElement(elem, optIgnoreOpacity) {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'tagName');\n    var computedStyleCache = new Map();\n    var clientRectCache = new Map();\n    var displayedCache = new Map();\n    function toUpperCaseTag(tagName) {\n        return tagName ? tagName.toUpperCase() : undefined;\n    }\n    function isElement(node, tagName) {\n        if (!node || node.nodeType !== 1) {\n            return false;\n        }\n        var asElement = node;\n        var rawTagName = tagNameDescriptor && typeof tagNameDescriptor.get === 'function'\n            ? tagNameDescriptor.get.call(asElement)\n            : asElement.tagName;\n        var upperTagName = typeof rawTagName === 'string' ? rawTagName.toUpperCase() : '';\n        var normalizedTagName = toUpperCaseTag(tagName);\n        if (upperTagName === 'FORM') {\n            return !normalizedTagName || normalizedTagName === 'FORM';\n        }\n        return !!upperTagName && (!normalizedTagName || upperTagName === normalizedTagName);\n    }\n    function getParentElement(node) {\n        var current = node.parentNode;\n        while (current &&\n            current.nodeType !== Node.ELEMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_NODE &&\n            current.nodeType !== Node.DOCUMENT_FRAGMENT_NODE) {\n            current = current.parentNode;\n        }\n        return current && current.nodeType === 1 ? current : null;\n    }\n    function getEffectiveStyle(elem, propertyName) {\n        var computed = computedStyleCache.get(elem);\n        if (computed === undefined) {\n            var win = elem.ownerDocument.defaultView;\n            computed = win ? (win.getComputedStyle(elem) || null) : null;\n            computedStyleCache.set(elem, computed);\n        }\n        if (!computed) {\n            return null;\n        }\n        var value = computed.getPropertyValue(propertyName);\n        return value || null;\n    }\n    function getOpacity(elem) {\n        var opacityStyle = getEffectiveStyle(elem, 'opacity');\n        var opacity = opacityStyle ? Number(opacityStyle) : 1;\n        var parent = getParentElement(elem);\n        return parent ? opacity * getOpacity(parent) : opacity;\n    }\n    function getParentNodeInComposedDom(node) {\n        var parent = node.parentNode;\n        var slottable = node;\n        var parentWithShadow = parent;\n        if (parentWithShadow && parentWithShadow.shadowRoot && slottable.assignedSlot !== undefined) {\n            return slottable.assignedSlot ? slottable.assignedSlot.parentNode : null;\n        }\n        return parent;\n    }\n    function createRect(left, top, width, height) {\n        return {\n            left: left,\n            top: top,\n            right: left + width,\n            bottom: top + height,\n            width: width,\n            height: height,\n        };\n    }\n    function getClientRect(elem) {\n        var cachedRect = clientRectCache.get(elem);\n        if (cachedRect) {\n            return cachedRect;\n        }\n        var rect;\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            rect = imageMap.rect;\n        }\n        else {\n            var elemTagName = typeof elem.tagName === 'string' ? elem.tagName : '';\n            if (elemTagName.toUpperCase() === 'HTML') {\n                var doc = elem.ownerDocument;\n                var sizeElem = doc.compatMode === 'CSS1Compat' ? doc.documentElement : (doc.body || doc.documentElement);\n                rect = createRect(0, 0, sizeElem.clientWidth, sizeElem.clientHeight);\n            }\n            else {\n                try {\n                    var nativeRect = elem.getBoundingClientRect();\n                    rect = {\n                        left: nativeRect.left,\n                        top: nativeRect.top,\n                        right: nativeRect.right,\n                        bottom: nativeRect.bottom,\n                        width: nativeRect.right - nativeRect.left,\n                        height: nativeRect.bottom - nativeRect.top,\n                    };\n                }\n                catch (_error) {\n                    rect = createRect(0, 0, 0, 0);\n                }\n            }\n        }\n        clientRectCache.set(elem, rect);\n        return rect;\n    }\n    function getAreaRelativeRect(area) {\n        var shape = area.shape.toLowerCase();\n        var coords = area.coords.split(',').map(function (value) {\n            return Number(value.trim());\n        });\n        if (shape === 'rect' && coords.length === 4) {\n            return createRect(coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1]);\n        }\n        if (shape === 'circle' && coords.length === 3) {\n            return createRect(coords[0] - coords[2], coords[1] - coords[2], coords[2] * 2, coords[2] * 2);\n        }\n        if (shape === 'poly' && coords.length > 2) {\n            var minX = coords[0];\n            var minY = coords[1];\n            var maxX = minX;\n            var maxY = minY;\n            for (var index = 2; index + 1 \u003C coords.length; index += 2) {\n                minX = Math.min(minX, coords[index]);\n                maxX = Math.max(maxX, coords[index]);\n                minY = Math.min(minY, coords[index + 1]);\n                maxY = Math.max(maxY, coords[index + 1]);\n            }\n            return createRect(minX, minY, maxX - minX, maxY - minY);\n        }\n        return createRect(0, 0, 0, 0);\n    }\n    function findImageUsingMap(mapName, doc) {\n        return doc.querySelector('[usemap=\"#' + mapName.replace(/\\\\/g, '\\\\\\\\').replace(/\"/g, '\\\\\"') + '\"]');\n    }\n    function maybeFindImageMap(elem) {\n        var isMap = isElement(elem, 'MAP');\n        if (!isMap && !isElement(elem, 'AREA')) {\n            return null;\n        }\n        var map = isMap ? elem : isElement(elem.parentNode, 'MAP') ? elem.parentNode : null;\n        var image = null;\n        var rect = createRect(0, 0, 0, 0);\n        if (isElement(map, 'MAP') && map.name) {\n            image = findImageUsingMap(map.name, map.ownerDocument);\n            if (image) {\n                rect = getClientRect(image);\n                if (!isMap && isElement(elem, 'AREA') && elem.shape.toLowerCase() !== 'default') {\n                    var relativeRect = getAreaRelativeRect(elem);\n                    var relativeX = Math.min(Math.max(relativeRect.left, 0), rect.width);\n                    var relativeY = Math.min(Math.max(relativeRect.top, 0), rect.height);\n                    var width = Math.min(relativeRect.width, rect.width - relativeX);\n                    var height = Math.min(relativeRect.height, rect.height - relativeY);\n                    rect = createRect(relativeX + rect.left, relativeY + rect.top, width, height);\n                }\n            }\n        }\n        return { image: image, rect: rect };\n    }\n    function getClientRegion(elem) {\n        return getClientRect(elem);\n    }\n    function getOverflowState(elem) {\n        var region = getClientRegion(elem);\n        var ownerDoc = elem.ownerDocument;\n        var htmlElem = ownerDoc.documentElement;\n        var bodyElem = ownerDoc.body;\n        var htmlOverflowStyle = getEffectiveStyle(htmlElem, 'overflow') || 'visible';\n        var treatAsFixedPosition = false;\n        function canBeOverflowed(container, position) {\n            if (container === htmlElem) {\n                return true;\n            }\n            var display = getEffectiveStyle(container, 'display') || '';\n            if (display.indexOf('inline') === 0 || display === 'contents') {\n                return false;\n            }\n            if (position === 'absolute' && getEffectiveStyle(container, 'position') === 'static') {\n                return false;\n            }\n            return true;\n        }\n        function getOverflowParent(current) {\n            var position = getEffectiveStyle(current, 'position');\n            if (position === 'fixed') {\n                treatAsFixedPosition = true;\n                return current === htmlElem ? null : htmlElem;\n            }\n            var parent = getParentElement(current);\n            while (parent && !canBeOverflowed(parent, position)) {\n                parent = getParentElement(parent);\n            }\n            return parent;\n        }\n        function getOverflowStyles(current) {\n            var overflowElem = current;\n            if (htmlOverflowStyle === 'visible') {\n                if (current === htmlElem && bodyElem) {\n                    overflowElem = bodyElem;\n                }\n                else if (current === bodyElem) {\n                    return { x: 'visible', y: 'visible' };\n                }\n            }\n            var overflow = {\n                x: getEffectiveStyle(overflowElem, 'overflow-x') || 'visible',\n                y: getEffectiveStyle(overflowElem, 'overflow-y') || 'visible',\n            };\n            if (current === htmlElem) {\n                overflow.x = overflow.x === 'visible' ? 'auto' : overflow.x;\n                overflow.y = overflow.y === 'visible' ? 'auto' : overflow.y;\n            }\n            return overflow;\n        }\n        function getScroll(current) {\n            if (current === htmlElem) {\n                return {\n                    x: ownerDoc.defaultView ? ownerDoc.defaultView.pageXOffset : 0,\n                    y: ownerDoc.defaultView ? ownerDoc.defaultView.pageYOffset : 0,\n                };\n            }\n            return { x: current.scrollLeft, y: current.scrollTop };\n        }\n        for (var container = getOverflowParent(elem); container; container = getOverflowParent(container)) {\n            var containerOverflow = getOverflowStyles(container);\n            if (containerOverflow.x === 'visible' && containerOverflow.y === 'visible') {\n                continue;\n            }\n            var containerRect = getClientRect(container);\n            if (containerRect.width === 0 || containerRect.height === 0) {\n                return 'hidden';\n            }\n            var underflowsX = region.right \u003C containerRect.left;\n            var underflowsY = region.bottom \u003C containerRect.top;\n            if ((underflowsX && containerOverflow.x === 'hidden') || (underflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((underflowsX && containerOverflow.x !== 'visible') || (underflowsY && containerOverflow.y !== 'visible')) {\n                var containerScroll = getScroll(container);\n                var unscrollableX = region.right \u003C containerRect.left - containerScroll.x;\n                var unscrollableY = region.bottom \u003C containerRect.top - containerScroll.y;\n                if ((unscrollableX && containerOverflow.x !== 'visible') || (unscrollableY && containerOverflow.y !== 'visible')) {\n                    return 'hidden';\n                }\n                var containerUnderflowState = getOverflowState(container);\n                return containerUnderflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n            var overflowsX = region.left >= containerRect.left + containerRect.width;\n            var overflowsY = region.top >= containerRect.top + containerRect.height;\n            if ((overflowsX && containerOverflow.x === 'hidden') || (overflowsY && containerOverflow.y === 'hidden')) {\n                return 'hidden';\n            }\n            if ((overflowsX && containerOverflow.x !== 'visible') || (overflowsY && containerOverflow.y !== 'visible')) {\n                if (treatAsFixedPosition) {\n                    var docScroll = getScroll(container);\n                    if (region.left >= htmlElem.scrollWidth - docScroll.x || region.right >= htmlElem.scrollHeight - docScroll.y) {\n                        return 'hidden';\n                    }\n                }\n                var containerOverflowState = getOverflowState(container);\n                return containerOverflowState === 'hidden' ? 'hidden' : 'scroll';\n            }\n        }\n        return 'none';\n    }\n    function isShownInternal(elem, ignoreOpacity, displayedFn) {\n        if (!isElement(elem)) {\n            throw new Error('Argument to isShown must be of type Element');\n        }\n        if (isElement(elem, 'BODY')) {\n            return true;\n        }\n        if (isElement(elem, 'OPTION') || isElement(elem, 'OPTGROUP')) {\n            var select = elem.closest('select');\n            return !!select && isShownInternal(select, true, displayedFn);\n        }\n        var imageMap = maybeFindImageMap(elem);\n        if (imageMap) {\n            return !!imageMap.image && imageMap.rect.width > 0 && imageMap.rect.height > 0 &&\n                isShownInternal(imageMap.image, ignoreOpacity, displayedFn);\n        }\n        if (isElement(elem, 'INPUT') && elem.type.toLowerCase() === 'hidden') {\n            return false;\n        }\n        if (isElement(elem, 'NOSCRIPT')) {\n            return false;\n        }\n        var visibility = getEffectiveStyle(elem, 'visibility');\n        if (visibility === 'collapse' || visibility === 'hidden') {\n            return false;\n        }\n        if (!displayedFn(elem)) {\n            return false;\n        }\n        if (!ignoreOpacity && getOpacity(elem) === 0) {\n            return false;\n        }\n        function positiveSize(element) {\n            var rect = getClientRect(element);\n            if (rect.height > 0 && rect.width > 0) {\n                return true;\n            }\n            if (isElement(element, 'PATH') && (rect.height > 0 || rect.width > 0)) {\n                var strokeWidth = getEffectiveStyle(element, 'stroke-width');\n                return !!strokeWidth && parseInt(strokeWidth, 10) > 0;\n            }\n            var elementVisibility = getEffectiveStyle(element, 'visibility');\n            if (elementVisibility === 'collapse' || elementVisibility === 'hidden') {\n                return false;\n            }\n            if (!displayedFn(element)) {\n                return false;\n            }\n            if (getEffectiveStyle(element, 'overflow') === 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (child.nodeType === Node.TEXT_NODE) {\n                    var text = child.nodeValue || '';\n                    if (/^[\\s]*$/.test(text) && /[\\n\\r\\t]/.test(text)) {\n                        continue;\n                    }\n                    return true;\n                }\n                if (isElement(child) && positiveSize(child)) {\n                    return true;\n                }\n            }\n            return false;\n        }\n        if (!positiveSize(elem)) {\n            return false;\n        }\n        function hiddenByOverflow(element) {\n            if (getOverflowState(element) !== 'hidden') {\n                return false;\n            }\n            for (var index = 0; index \u003C element.childNodes.length; index += 1) {\n                var child = element.childNodes[index];\n                if (isElement(child) && !hiddenByOverflow(child) && positiveSize(child)) {\n                    return false;\n                }\n            }\n            return true;\n        }\n        return !hiddenByOverflow(elem);\n    }\n    function displayed(node) {\n        var cached = displayedCache.get(node);\n        if (cached !== undefined) {\n            return cached;\n        }\n        if (isElement(node)) {\n            var display = getEffectiveStyle(node, 'display');\n            var contentVisibility = getEffectiveStyle(node, 'content-visibility');\n            if (display === 'none' || contentVisibility === 'hidden') {\n                displayedCache.set(node, false);\n                return false;\n            }\n        }\n        var parent = getParentNodeInComposedDom(node);\n        if (typeof ShadowRoot === 'function' && parent instanceof ShadowRoot) {\n            if (parent.host.shadowRoot && parent.host.shadowRoot !== parent) {\n                displayedCache.set(node, false);\n                return false;\n            }\n            parent = parent.host;\n        }\n        if (parent && (parent.nodeType === Node.DOCUMENT_NODE || parent.nodeType === Node.DOCUMENT_FRAGMENT_NODE)) {\n            displayedCache.set(node, true);\n            return true;\n        }\n        if (isElement(parent, 'DETAILS') && !parent.open && !isElement(node, 'SUMMARY')) {\n            displayedCache.set(node, false);\n            return false;\n        }\n        var result = !!parent && displayed(parent);\n        displayedCache.set(node, result);\n        return result;\n    }\n    return isShownInternal(elem, !!optIgnoreOpacity, displayed);\n})).apply(null, arguments);"
+}
+[1790521594.633][INFO]: Waiting for pending navigations...
+[1790521594.635][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.652][INFO]: Waiting for pending navigations...
+[1790521594.654][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.654][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ExecuteScript true
+[1790521594.657][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND IsElementEnabled {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.37"
+}
+[1790521594.657][INFO]: Waiting for pending navigations...
+[1790521594.659][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.674][INFO]: Waiting for pending navigations...
+[1790521594.676][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.677][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE IsElementEnabled true
+[1790521594.680][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND ClickElement {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F9685DC71C9F66BC7CEF200598C6047A.e.37"
+}
+[1790521594.680][INFO]: Waiting for pending navigations...
+[1790521594.683][INFO]: Done waiting for pending navigations. Status: ok
+[1513:1513:0927/110634.842077:INFO:CONSOLE:4] "Processing event: BROWSER_TRUST_DECIDED for view browser_trust", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1513:1513:0927/110634.842651:INFO:CONSOLE:4] "Event: BROWSER_TRUST_DECIDED Current view: browser_trust Next view: auth_success", source: https://api-4f567d87.duosecurity.com/prompt/static/js/entrypoints/auth.js?v=56e2b (4)
+[1790521594.847][INFO]: Waiting for pending navigations...
+[1790521594.856][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.856][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE ClickElement
+[1790521594.859][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetUrl {
+}
+[1790521594.859][INFO]: Waiting for pending navigations...
+[1790521594.867][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.871][INFO]: Waiting for pending navigations...
+[1790521594.872][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.872][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetUrl "https://api-4f567d87.duosecurity.com/prompt/DAFMC0DCGVGJHM1I17JA?authkey=AXNSN6CYSX1Q8BLX7OR9&req_trace_group=79ea7c178dd0a83eb1747e63"
+[1790521594.873][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetCookies {
+}
+[1790521594.873][INFO]: Waiting for pending navigations...
+[1790521594.874][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.877][INFO]: Waiting for pending navigations...
+[1790521594.878][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.878][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetCookies [ {
+   "domain": "api-4f567d87.duosecurity.com",
+   "expiry": 1825081594,
+   "httpOnly": true,
+   "name": "trc|DUH862DO2XNA9VDAWBJI|DAFMC0DCGVGJHM1I17JA",
+   "path": "/",
+   "sameSite": "None",
+   "secure": true,
+   "value": "EPJNOF3LN5PC8M7PJEK6"
+}, {
+   "domain": "api-4f567d87.duosecurity.com",
+   "httpOnly": true,
+   "name": "auth-sid-c-init-0ffd6be19140471387e8e02ec380ad22",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "\"Njk2Y2FlZTg0NGUwNDA0YTg5YmQ5NzlhODNkYzc1NGM=|1790521580|2500280cfdcab149277367df7b043a5ac94fd529\""
+}, {
+   "domain": "api-4f567d87.duosecurity.com",
+   "expiry": 1790522480,
+   "httpOnly": true,
+   "name": "frameless-session-binding-b786a6ef-6553-48a6-a4ab-d6fe58eea2f2",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "OGNjODRmODgtYWJiZC00MTZhLTg5N2EtZGM4NDM0NzA0Zjk1|1790521580|1e9e42e835fe6cbdb46ed4d9a096fc0f30b3041e"
+}, {
+   "domain": "api-4f567d87.duosecurity.com",
+   "httpOnly": true,
+   "name": "auth-sid-c",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "\"Njk2Y2FlZTg0NGUwNDA0YTg5YmQ5NzlhODNkYzc1NGM=|1790521580|85ec2700fadad7d4d7aa925405e3e92e1255cca7\""
+}, {
+   "domain": "api-4f567d87.duosecurity.com",
+   "expiry": 1825081594,
+   "httpOnly": true,
+   "name": "hac|DUH862DO2XNA9VDAWBJI|DAFMC0DCGVGJHM1I17JA",
+   "path": "/",
+   "sameSite": "None",
+   "secure": true,
+   "value": "\"MTc5MDUyMTU5NA==|1790521594|b96708b235ffafbe65aa2a64598dde919fd5f8bd\""
+}, {
+   "domain": "api-4f567d87.duosecurity.com",
+   "expiry": 1822057594,
+   "httpOnly": true,
+   "name": "lam|DIZ2EP8R81UFH9PLIA44|DUH862DO2XNA9VDAWBJI",
+   "path": "/",
+   "sameSite": "None",
+   "secure": true,
+   "value": "SMS_Passcode|DPJTHSOTJ5AWHPZ3QJ9X"
+} ]
+[1790521594.879][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetUrl {
+}
+[1790521594.879][INFO]: Waiting for pending navigations...
+[1790521594.879][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.881][INFO]: Waiting for pending navigations...
+[1790521594.881][INFO]: Done waiting for pending navigations. Status: ok
+[1790521594.881][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetUrl "https://api-4f567d87.duosecurity.com/prompt/DAFMC0DCGVGJHM1I17JA?authkey=AXNSN6CYSX1Q8BLX7OR9&req_trace_group=79ea7c178dd0a83eb1747e63"
+[1790521595.383][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetUrl {
+}
+[1790521595.383][INFO]: Waiting for pending navigations...
+[1790521595.385][INFO]: Done waiting for pending navigations. Status: ok
+[1790521595.394][INFO]: Waiting for pending navigations...
+[1790521595.396][INFO]: Done waiting for pending navigations. Status: ok
+[1790521595.396][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetUrl "https://api-4f567d87.duosecurity.com/prompt/DAFMC0DCGVGJHM1I17JA?authkey=AXNSN6CYSX1Q8BLX7OR9&req_trace_group=79ea7c178dd0a83eb1747e63"
+[1790521595.900][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetUrl {
+}
+[1790521595.900][INFO]: Waiting for pending navigations...
+[1790521595.902][INFO]: Done waiting for pending navigations. Status: ok
+[1790521595.912][INFO]: Waiting for pending navigations...
+[1790521595.914][INFO]: Done waiting for pending navigations. Status: ok
+[1790521595.914][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetUrl "https://api-4f567d87.duosecurity.com/prompt/DAFMC0DCGVGJHM1I17JA?authkey=AXNSN6CYSX1Q8BLX7OR9&req_trace_group=79ea7c178dd0a83eb1747e63"
+[1790521596.417][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetUrl {
+}
+[1790521596.417][INFO]: Waiting for pending navigations...
+[1513:1513:0927/110638.498542:INFO:CONSOLE:15] "[bugsnag] Loaded!", source: https://d3uyg54qwz4w8h.cloudfront.net/assets/my4/application-4f1fac8b.js (15)
+[1790521598.567][INFO]: Done waiting for pending navigations. Status: ok
+[1790521598.572][INFO]: Waiting for pending navigations...
+[1790521598.574][INFO]: Done waiting for pending navigations. Status: ok
+[1790521598.574][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetUrl "https://my.umbc.edu/"
+[1790521598.577][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetCookies {
+}
+[1790521598.577][INFO]: Waiting for pending navigations...
+[1790521598.579][INFO]: Done waiting for pending navigations. Status: ok
+[1790521598.630][INFO]: Waiting for pending navigations...
+[1513:1513:0927/110638.633720:INFO:CONSOLE:0] "Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.", source: https://my.umbc.edu/ (0)
+[1790521598.634][INFO]: Done waiting for pending navigations. Status: ok
+[1790521598.634][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetCookies [ {
+   "domain": "my.umbc.edu",
+   "httpOnly": true,
+   "name": "_myumbc_session",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "OYI2c8CA5HAWemISGvAg%2F%2BI5%2BD2QdkSdTaKRGpxXb%2BsJS7NJLftiy0MgRkp5lLMk9VQuWqpZIDgU4LcrbAjU98cp4%2Bq6b6r%2F4hzWlErV2yHSFEWRZ7fknrfH28TK37FwNxYMmO4B1yC1vV3kibapwAxjmNOGCkf4KpcDlJRXLuZa79Lhg6dEuUgJa..."
+}, {
+   "domain": ".umbc.edu",
+   "httpOnly": false,
+   "name": "myumbc_sso_session",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "1"
+}, {
+   "domain": ".umbc.edu",
+   "expiry": 1793113597,
+   "httpOnly": false,
+   "name": "umbc_roles",
+   "path": "/",
+   "sameSite": "Lax",
+   "secure": true,
+   "value": "undergraduate-student"
+}, {
+   "domain": "my.umbc.edu",
+   "expiry": 1825081597,
+   "httpOnly": true,
+   "name": "_myumbc_agent",
+   "path": "/",
+   "sameSite": "None",
+   "secure": true,
+   "value": "QwuWUf%2BpmlU1M5Mhv%2BYWxMJXBjZnmyiO3AJXdcnI2UDn7Hw4y%2FzyR32XgupqCPiUsEYJ9stisHQfOB8KSVMqhcTcQ9c8g5dm%2FdNoPsfChakSaYG957H4egE8wH7SkschON6FKmpqHyTMusNvM0azrhT1mPSH7rmPqxjcZQMd05QR%2FSZQn1D6rTaFG7h..."
+} ]
+[1790521598.636][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521598.636][INFO]: Waiting for pending navigations...
+[1790521598.638][INFO]: Done waiting for pending navigations. Status: ok
+[1790521598.897][INFO]: Waiting for pending navigations...
+[1513:1542:0927/110639.490255:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[1790521600.864][INFO]: Done waiting for pending navigations. Status: ok
+[1790521600.864][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521600.865][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521600.865][INFO]: Waiting for pending navigations...
+[1790521600.866][INFO]: Done waiting for pending navigations. Status: ok
+[1790521600.875][INFO]: Waiting for pending navigations...
+[1790521600.876][INFO]: Done waiting for pending navigations. Status: ok
+[1790521600.876][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521601.378][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521601.378][INFO]: Waiting for pending navigations...
+[1790521601.381][INFO]: Done waiting for pending navigations. Status: ok
+[1790521601.397][INFO]: Waiting for pending navigations...
+[1790521601.399][INFO]: Done waiting for pending navigations. Status: ok
+[1790521601.399][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.D3D32329C8949C255667348C4275DE6D.e.34"
+}
+[1790521601.402][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetElementText {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.D3D32329C8949C255667348C4275DE6D.e.34"
+}
+[1790521601.402][INFO]: Waiting for pending navigations...
+[1790521601.404][INFO]: Done waiting for pending navigations. Status: ok
+[1790521601.444][INFO]: Waiting for pending navigations...
+[1790521601.445][INFO]: Done waiting for pending navigations. Status: ok
+[1790521601.446][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetElementText "A05 - Super 225 09/25/26 11:09:43 PM TG LATE NIGHT 436 - 1"
+[1513:1542:0927/110734.466963:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[1790521683.816][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521683.816][INFO]: Waiting for pending navigations...
+[1790521683.818][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.295][INFO]: Waiting for pending navigations...
+[1790521685.413][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.413][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521685.415][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521685.415][INFO]: Waiting for pending navigations...
+[1790521685.417][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.425][INFO]: Waiting for pending navigations...
+[1790521685.426][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.426][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521685.928][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521685.928][INFO]: Waiting for pending navigations...
+[1790521685.931][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.947][INFO]: Waiting for pending navigations...
+[1790521685.949][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.949][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.8B3C3457327BAF14C8F7B739CFAEA5DA.e.217"
+}
+[1790521685.952][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetElementText {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.8B3C3457327BAF14C8F7B739CFAEA5DA.e.217"
+}
+[1790521685.953][INFO]: Waiting for pending navigations...
+[1790521685.955][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.983][INFO]: Waiting for pending navigations...
+[1790521685.985][INFO]: Done waiting for pending navigations. Status: ok
+[1790521685.985][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetElementText "A05 - Super 225 09/25/26 11:09:43 PM TG LATE NIGHT 436 - 1"
+[1513:1513:0927/110905.888367:INFO:CONSOLE:0] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO&co=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbTo0NDM.&hl=en&v=kemdRjWFxNjgsGdhRslyEPwU&size=normal&s=yyKdPYYgUTTIqDtdWScf9wrPmDD78ytjvTEjNq1vOr7l0xgvtA1z7202tL92g45He4CpaLpjcuW2z3Jj5WfrawsnhDWYqGi_-x0cPwON-RpYL0HbYepWX50C4pain_RHEeJeRv-W-2IVjRz3_LRiDRvxgrv06a21JNpWyEi1zBkHg1ynhbPoYAdqU6ll0QCiAij0xi3PUUcXYpJchEHpsaPfWk0tkmgver4OqLO-0KnBWtVKysBJLQEohDOtgpGzMaUrn5HgFzDKUbIal9pcGNi7VsirIPc&anchor-ms=20000&execute-ms=30000&cb=m33qmzfoxlr8 (0)
+[1513:1513:0927/110906.094386:INFO:CONSOLE:4] "Uncaught ReferenceError: solveSimpleChallenge is not defined", source: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dclaudeai%26oq%3Dclaudeai%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOdIBCDUzNTlqMGo3qAIAsAIA%26sourceid%3Dchrome%26source%3Dchrome.ob%26ie%3DUTF-8%26sei%3DkTG5au_ABfPU5NoPraPd2QY&q=EhAmIAAAUwEhAccAV08UqsBlGJHj5NUGIjAcvACRK_dO2rcT6SowXXdP-LO2Yy8EcQ9TBe-P0CH0m3vfraWYd47uY0exnQoMHHUyAVJaAUM (4)
+[1513:1513:0927/110906.408116:INFO:CONSOLE:0] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: https://www.google.com/recaptcha/enterprise/bframe?hl=en&v=kemdRjWFxNjgsGdhRslyEPwU&k=6LdLLIMbAAAAAIl-KLj9p1ePhM-4LCCDbjtJLqRO&bft=0dAFcWeA79MndQ3UxK5BWHSagCgPA153VdVBr0DIMnIsTU97VyGlIOhwUtRcMGoiYtPPjIsjTbGvO8rsM0VCnfraERBicM3JKmtA (0)
+[3756:3756:0927/110912.798460:ERROR:services/on_device_model/ml/gpu_blocklist.cc:120] Unable to get gpu adapter
+[1513:1513:0927/110912.798744:ERROR:services/on_device_model/public/cpp/service_client.cc:37] Unexpected on_device_model service disconnect; reason: 1, description: Error loading backend.
+[1513:1542:0927/110927.157673:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[1790521771.797][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521771.797][INFO]: Waiting for pending navigations...
+[1790521771.800][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.211][INFO]: Waiting for pending navigations...
+[1790521773.320][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.320][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate
+[1790521773.321][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521773.321][INFO]: Waiting for pending navigations...
+[1790521773.321][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.326][INFO]: Waiting for pending navigations...
+[1790521773.327][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.327][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"}
+  (Session info: chrome=153.0.8010.52)
+[1790521773.833][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND FindElement {
+   "using": "xpath",
+   "value": "/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div/table/tbody/tr[1]"
+}
+[1790521773.833][INFO]: Waiting for pending navigations...
+[1790521773.837][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.845][INFO]: Waiting for pending navigations...
+[1790521773.846][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.849][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F4907ECE8543D66D22447182E8D545ED.e.390"
+}
+[1790521773.850][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND GetElementText {
+   "id": "f.0639ED22AEB5A6A4BABECDB70108D9D1.d.F4907ECE8543D66D22447182E8D545ED.e.390"
+}
+[1790521773.850][INFO]: Waiting for pending navigations...
+[1790521773.851][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.861][INFO]: Waiting for pending navigations...
+[1790521773.862][INFO]: Done waiting for pending navigations. Status: ok
+[1790521773.862][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE GetElementText "A05 - Super 225 09/25/26 11:09:43 PM TG LATE NIGHT 436 - 1"
+[1513:1513:0927/110934.878876:INFO:CONSOLE:0] "Mixed Content: The page at 'https://www.google.com/search?q=claudeai&oq=claudeai&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUzNTlqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=kTG5au_ABfPU5NoPraPd2QY' was loaded over HTTPS, but requested an insecure element 'http://img.youtube.com/vi/mQtwgEXBc_I/hqdefault.jpg'. This request was automatically upgraded to HTTPS, For more information see https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html", source: https://www.google.com/search?q=claudeai&oq=claudeai&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUzNTlqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=kTG5au_ABfPU5NoPraPd2QY (0)
+[1513:1513:0927/110935.333345:INFO:CONSOLE:291] "Unrecognized feature: 'web-share'.", source: https://www.google.com/xjs/_/js/k=xjs.s.en.O_vEnnLs6e4.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAIABAAQAIABAAAAAAAAAAAAAAAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQACQAIAAAAAAAAAgCAAAAAAEAAAAAAAAADAAAACABAAQgAAAAAKAAAAAAAAAAAAAAAAAAAAAACAAIEAAABABAIAQAAAAP8Y8w0AABoAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAABYAAAAAAgwAACAABBAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAoAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAoAAAAAAAAgAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACDAAAAAAAAAAAAAAKAAR-AEEAAgAAAAAABAAAAAAAAAAAAIAEIAAAAAAAAAAAARAAYAAAAADkAHg8AIcICgAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAcyBJCAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAhPAQAAAAAAwNYAgA/d=0/dg=0/br=1/rs=ACT90oFNuCmhRjQKaFwZHQ8BhwI74hDgLQ/cb=loaded_h_0/m=sy9pl,sy67j,nNxkYd,sy9pv,sy67i,sy560,sy3jc,sy3je,sy1ln,sy55z,sy2w8,sy55y,sy138,nTNfhe,sy67o,sy677,VtMfj,sy3ni,P10Owf,sy3kg,gSZvdb,sy64o,sy2oz,sy12x,sy12y,sy12v,sy3lw,sy3lv,VD4Qme,sy66f,TmFfhf,sy2hq,CR7Ufe,R9Ulx,sy2hn,J1A7Od,GleZL,sy2hr,l1Owbf,sy2hm,Dq2Yjb,sy2hv,sy2hu,sy2hs,NVlnE,sy2hw,sy2hb,qmdEUe,sy2hy,sy2hx,UqGwg,gCngrf,sy6rq,sy3ba,sA1ssc,sy6rk,khkNpe?cb=121509378&xjs=s4 (291)
+[1513:1513:0927/110936.034320:INFO:CONSOLE:0] "No available adapters.", source: https://www.youtube.com/embed/?enablejsapi=1&rel=0&autoplay=0&playsinline=1&fs=1&hl=en&authuser=0&embed_config=%7B%22enc%22%3A%22AXH1ezlOlulAzT8q1ivjPD8b4680d-aM8_AJChNLGDf9_FfwGpd8Y94N116cRpx7hSnWDJN_a7CupxyQLD4SgnX9OWWDECVwrlKus5IF0Qre-ZApSAyovc32Pgyz1kCybl2EkyUkt31XD9PIKECGd0Q8alC_QJPsqsYJ9D_l2O__iXwf39LqFmiz7n9I2qz-758jiBd2dl-BfCD1s8V0_kiKMhwhNguCg6OYC-HOqBAMcKMQQ1aAUwhsQYOyOxhcYFOLcomRz4d1xaMKM_GpM42JC7SLtWYW4le__NrkBbX_vQkqDUjTVABy3emCctsqX8OiKgerqzqRMU0lVhdbF4MoypAtw1jlQVgA16HJ%22%7D (0)
+[1513:1513:0927/110936.110362:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110936.110406:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110938.036648:INFO:CONSOLE:32] "Unrecognized feature: 'attribution-reporting'.", source: https://www.google.com/search?q=claudeai&oq=claudeai&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUzNTlqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=kTG5au_ABfPU5NoPraPd2QY (32)
+[1513:1513:0927/110938.040610:INFO:CONSOLE:32] "Unrecognized feature: 'attribution-reporting'.", source: https://www.google.com/search?q=claudeai&oq=claudeai&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUzNTlqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=kTG5au_ABfPU5NoPraPd2QY (32)
+[1513:1513:0927/110938.367156:INFO:CONSOLE:0] "Error with Permissions-Policy header: Unrecognized feature: 'attribution-reporting'.", source:  (0)
+[1513:1513:0927/110938.367341:INFO:CONSOLE:0] "Error with Permissions-Policy header: Unrecognized feature: 'bluetooth'.", source:  (0)
+[1513:1513:0927/110938.367429:INFO:CONSOLE:0] "Error with Permissions-Policy header: Unrecognized feature: 'web-share'.", source:  (0)
+[1513:1513:0927/110938.710216:INFO:CONSOLE:5] "[O11Y] [DatadogRUM] Initialized [object Object]", source: https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-datadog-BzMwoDjB.js (5)
+[1513:1513:0927/110938.984791:INFO:CONSOLE:5] "recaptchacompat disabled", source: https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-datadog-BzMwoDjB.js (5)
+[1513:1513:0927/110939.234668:INFO:CONSOLE:0] "Not signed in with the identity provider.", source: https://claude.ai/login?returnTo=%2F%3Futm_source%3Dgoogle_brand%26utm_campaign%3D%7Bcampaign%7D%26utm_medium%3Dcpc%26utm_content%3D823276214377%26utm_term%3Dclaudeai%26targetid%3Dkwd-2165710374185%26gad_source%3D1%26gad_campaignid%3D23941533550%26gbraid%3D0AAAAAqwcL8ltsYqiom2AD_v2Dr5R1Hn5O%26gclid%3DEAIaIQobChMIrJnHsoWPlwMVZG1HAR3V1QU_EAAYASAAEgI7rPD_BwE (0)
+[1513:1513:0927/110939.825908:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110939.825950:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110940.131089:INFO:CONSOLE:5] "[GSI_LOGGER]: FedCM get() rejects with AbortError: signal is aborted without reason", source: https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-datadog-BzMwoDjB.js (5)
+[1513:1513:0927/110940.147242:INFO:CONSOLE:5] "[antalytics] %s failed: flush Error: batch dropped (4xx); 2 events lost", source: https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-datadog-BzMwoDjB.js (5)
+[1513:1513:0927/110940.261018:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110940.261076:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110940.315318:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:748] Message 2 rejected by interface blink.mojom.Widget
+[1513:1513:0927/110940.577345:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110940.577397:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110940.601755:INFO:CONSOLE:0] "[DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o", source: https://accounts.google.com/v3/signin/identifier?opparams=%253Fgislp%253D1%2526response_mode%253Dform_post%2526enable_granular_consent%253Dtrue%2526gis_params%253DGBMqK1RzM1JGaUdUcTZoS1hvb1ZJNy8xZDJzYmw3YVhETXhVSnZKMDEzaWovejQ4AUIKYXV0aDEyODY3MGgB%2526upstream_experiment_id%253D117788636&dsh=S-805175461%3A1790521780141639&access_type=offline&client_id=1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com&display=popup&gsiwebsdk=gis_attributes&include_granted_scopes=true&o2v=1&origin=https%3A%2F%2Fclaude.ai&prompt=consent&redirect_uri=gis_transform&response_type=code&scope=openid+profile+email&service=lso&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAM_fzdFcAY7BXcjDp0idlgoctXurkY8EKJrg6iMtj_EYI2I1iiDUlZcnOMr4NWDXQUitcQqxoaboQn-nqu-G4fSlwqYaiTsMqh-FF-utPQ6E4w0Sin5_1MdUUJBUTzRA8QmDi4oy4AvqI-6ZDrKl3Ifud9tAjXD3u4MJpyU26xC_NbQgpRzLznQS9yGIlaXJTqqsg9m6_ots48cTkxXffonxQAO53n99_tBB-3xfjFTV1F9ILmbEZBfAmYMsWEt7osPuVmTPEoF4I0b3h3pHzd1phLBYI0m2qt88TigLIEjor7s2ib3KBENfXP6JAbvD3Kj4ydlgwTtZQYSqtG5CEeT-EXxixSlM7NKo6t58V4OAgtOWKh057y7zgMCPIxlHZlcXkziOSCIcF0uhbdChxISoUMhTnnq3MhaNnO_bzQ2JSao2sCuflj2uX0Z-6MNoghnyYxM-RwEbdY8mmKl__593WzuLA%26flowName%3DGeneralOAuthFlow%26as%3DS-805175461%253A1790521780141639%26client_id%3D1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fclaude.ai&rart=ANgoxce7u48AZqgfHNtqyTkju55btVn_qD9niFyVq43BrHZ1Epe7WRRzWzWVNwBtSClliBMMc8QcbFDlpaJ6HMXf3SMZo4KSpLzAKrjFVqZcpFIF3Exed2I (0)
+[1513:1513:0927/110940.623457:INFO:CONSOLE:564] "%c%s color: red; background: yellow; font-size: 24px; WARNING!", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.HlNk4SmlRUo.es5.O/am=QQQAAADgwBsJAPrfAAACCLYDvq8FoAkQMgAAAAAAAAAAgAUAAFQRQA/d=1/excm=_b,_tp,identifierview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlExgf7GwHH48pCfEZL0t_wPLRWufg/dti=1/m=_b,_tp (564)
+[1513:1513:0927/110940.623565:INFO:CONSOLE:564] "%c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand.", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.HlNk4SmlRUo.es5.O/am=QQQAAADgwBsJAPrfAAACCLYDvq8FoAkQMgAAAAAAAAAAgAUAAFQRQA/d=1/excm=_b,_tp,identifierview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlExgf7GwHH48pCfEZL0t_wPLRWufg/dti=1/m=_b,_tp (564)
+[1513:1513:0927/110940.938546:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110940.938591:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110941.034051:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110941.034096:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110941.086339:INFO:CONSOLE:0] "No available adapters.", source: https://accounts.google.com/v3/signin/identifier?opparams=%253Fgislp%253D1%2526response_mode%253Dform_post%2526enable_granular_consent%253Dtrue%2526gis_params%253DGBMqK1RzM1JGaUdUcTZoS1hvb1ZJNy8xZDJzYmw3YVhETXhVSnZKMDEzaWovejQ4AUIKYXV0aDEyODY3MGgB%2526upstream_experiment_id%253D117788636&dsh=S-805175461%3A1790521780141639&access_type=offline&client_id=1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com&display=popup&gsiwebsdk=gis_attributes&include_granted_scopes=true&o2v=1&origin=https%3A%2F%2Fclaude.ai&prompt=consent&redirect_uri=gis_transform&response_type=code&scope=openid+profile+email&service=lso&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAM_fzdFcAY7BXcjDp0idlgoctXurkY8EKJrg6iMtj_EYI2I1iiDUlZcnOMr4NWDXQUitcQqxoaboQn-nqu-G4fSlwqYaiTsMqh-FF-utPQ6E4w0Sin5_1MdUUJBUTzRA8QmDi4oy4AvqI-6ZDrKl3Ifud9tAjXD3u4MJpyU26xC_NbQgpRzLznQS9yGIlaXJTqqsg9m6_ots48cTkxXffonxQAO53n99_tBB-3xfjFTV1F9ILmbEZBfAmYMsWEt7osPuVmTPEoF4I0b3h3pHzd1phLBYI0m2qt88TigLIEjor7s2ib3KBENfXP6JAbvD3Kj4ydlgwTtZQYSqtG5CEeT-EXxixSlM7NKo6t58V4OAgtOWKh057y7zgMCPIxlHZlcXkziOSCIcF0uhbdChxISoUMhTnnq3MhaNnO_bzQ2JSao2sCuflj2uX0Z-6MNoghnyYxM-RwEbdY8mmKl__593WzuLA%26flowName%3DGeneralOAuthFlow%26as%3DS-805175461%253A1790521780141639%26client_id%3D1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fclaude.ai&rart=ANgoxce7u48AZqgfHNtqyTkju55btVn_qD9niFyVq43BrHZ1Epe7WRRzWzWVNwBtSClliBMMc8QcbFDlpaJ6HMXf3SMZo4KSpLzAKrjFVqZcpFIF3Exed2I (0)
+[1513:1513:0927/110941.090031:INFO:CONSOLE:0] "No available adapters.", source: https://accounts.google.com/v3/signin/identifier?opparams=%253Fgislp%253D1%2526response_mode%253Dform_post%2526enable_granular_consent%253Dtrue%2526gis_params%253DGBMqK1RzM1JGaUdUcTZoS1hvb1ZJNy8xZDJzYmw3YVhETXhVSnZKMDEzaWovejQ4AUIKYXV0aDEyODY3MGgB%2526upstream_experiment_id%253D117788636&dsh=S-805175461%3A1790521780141639&access_type=offline&client_id=1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com&display=popup&gsiwebsdk=gis_attributes&include_granted_scopes=true&o2v=1&origin=https%3A%2F%2Fclaude.ai&prompt=consent&redirect_uri=gis_transform&response_type=code&scope=openid+profile+email&service=lso&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAM_fzdFcAY7BXcjDp0idlgoctXurkY8EKJrg6iMtj_EYI2I1iiDUlZcnOMr4NWDXQUitcQqxoaboQn-nqu-G4fSlwqYaiTsMqh-FF-utPQ6E4w0Sin5_1MdUUJBUTzRA8QmDi4oy4AvqI-6ZDrKl3Ifud9tAjXD3u4MJpyU26xC_NbQgpRzLznQS9yGIlaXJTqqsg9m6_ots48cTkxXffonxQAO53n99_tBB-3xfjFTV1F9ILmbEZBfAmYMsWEt7osPuVmTPEoF4I0b3h3pHzd1phLBYI0m2qt88TigLIEjor7s2ib3KBENfXP6JAbvD3Kj4ydlgwTtZQYSqtG5CEeT-EXxixSlM7NKo6t58V4OAgtOWKh057y7zgMCPIxlHZlcXkziOSCIcF0uhbdChxISoUMhTnnq3MhaNnO_bzQ2JSao2sCuflj2uX0Z-6MNoghnyYxM-RwEbdY8mmKl__593WzuLA%26flowName%3DGeneralOAuthFlow%26as%3DS-805175461%253A1790521780141639%26client_id%3D1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fclaude.ai&rart=ANgoxce7u48AZqgfHNtqyTkju55btVn_qD9niFyVq43BrHZ1Epe7WRRzWzWVNwBtSClliBMMc8QcbFDlpaJ6HMXf3SMZo4KSpLzAKrjFVqZcpFIF3Exed2I (0)
+[1513:1513:0927/110947.084363:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110947.084424:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110947.582971:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110947.583490:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110948.096031:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110948.096437:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110948.366926:INFO:CONSOLE:564] "%c%s color: red; background: yellow; font-size: 24px; WARNING!", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.HlNk4SmlRUo.es5.O/am=QQQAAADgwBsJAPrfAAACCLYDvq8FoAkQMgAAAAAAAAAAgAUAAFQRQA/d=1/excm=_b,_tp,signincontinueview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlExgf7GwHH48pCfEZL0t_wPLRWufg/dti=1/m=_b,_tp (564)
+[1513:1513:0927/110948.366984:INFO:CONSOLE:564] "%c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand.", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.HlNk4SmlRUo.es5.O/am=QQQAAADgwBsJAPrfAAACCLYDvq8FoAkQMgAAAAAAAAAAgAUAAFQRQA/d=1/excm=_b,_tp,signincontinueview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlExgf7GwHH48pCfEZL0t_wPLRWufg/dti=1/m=_b,_tp (564)
+[1513:1513:0927/110948.583854:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110948.583970:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110948.769981:INFO:CONSOLE:0] "No available adapters.", source: https://accounts.google.com/v3/signin/continue?sarp=1&scc=0&continue=https://accounts.google.com/signin/oauth/consent?authuser%3Dunknown%26part%3DAJi8hAM_fzdFcAY7BXcjDp0idlgoctXurkY8EKJrg6iMtj_EYI2I1iiDUlZcnOMr4NWDXQUitcQqxoaboQn-nqu-G4fSlwqYaiTsMqh-FF-utPQ6E4w0Sin5_1MdUUJBUTzRA8QmDi4oy4AvqI-6ZDrKl3Ifud9tAjXD3u4MJpyU26xC_NbQgpRzLznQS9yGIlaXJTqqsg9m6_ots48cTkxXffonxQAO53n99_tBB-3xfjFTV1F9ILmbEZBfAmYMsWEt7osPuVmTPEoF4I0b3h3pHzd1phLBYI0m2qt88TigLIEjor7s2ib3KBENfXP6JAbvD3Kj4ydlgwTtZQYSqtG5CEeT-EXxixSlM7NKo6t58V4OAgtOWKh057y7zgMCPIxlHZlcXkziOSCIcF0uhbdChxISoUMhTnnq3MhaNnO_bzQ2JSao2sCuflj2uX0Z-6MNoghnyYxM-RwEbdY8mmKl__593WzuLA%26flowName%3DGeneralOAuthFlow%26as%3DS-805175461:1790521780141639%26client_id%3D1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com%26requestPath%3D/signin/oauth/consent%23&plt=AKgnsbslwBOG6-E58VYzRqd_8IDhz1PGT3S-krVP9f0w6DtheMfvWLTS1ubL0x-ZK1MIKs9xhzWh51e9hRNtAE8wMBPM0PjzFz_4zXgj4MuOdOZhRIUPQFTVBJ-3W6fk7Ea9wZSxT4e6&PersistentCookie=1&service=lso&rart=ANgoxcf8pS-q9cbU-mbRO0kMTJd4P_sbTi-bS9_ZaqgIRWb4HSnmdiD2YZZkHCoOtuGaiTdKiCMT2HR-O5zUafYGXGsj2HNA8CIagdCAyWNjTOBSA9Bj7ls&checkedDomains=youtube&checkConnection=youtube:78&client_id=1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com&flowName=GeneralOAuthFlow (0)
+[1513:1513:0927/110948.770780:INFO:CONSOLE:0] "No available adapters.", source: https://accounts.google.com/v3/signin/continue?sarp=1&scc=0&continue=https://accounts.google.com/signin/oauth/consent?authuser%3Dunknown%26part%3DAJi8hAM_fzdFcAY7BXcjDp0idlgoctXurkY8EKJrg6iMtj_EYI2I1iiDUlZcnOMr4NWDXQUitcQqxoaboQn-nqu-G4fSlwqYaiTsMqh-FF-utPQ6E4w0Sin5_1MdUUJBUTzRA8QmDi4oy4AvqI-6ZDrKl3Ifud9tAjXD3u4MJpyU26xC_NbQgpRzLznQS9yGIlaXJTqqsg9m6_ots48cTkxXffonxQAO53n99_tBB-3xfjFTV1F9ILmbEZBfAmYMsWEt7osPuVmTPEoF4I0b3h3pHzd1phLBYI0m2qt88TigLIEjor7s2ib3KBENfXP6JAbvD3Kj4ydlgwTtZQYSqtG5CEeT-EXxixSlM7NKo6t58V4OAgtOWKh057y7zgMCPIxlHZlcXkziOSCIcF0uhbdChxISoUMhTnnq3MhaNnO_bzQ2JSao2sCuflj2uX0Z-6MNoghnyYxM-RwEbdY8mmKl__593WzuLA%26flowName%3DGeneralOAuthFlow%26as%3DS-805175461:1790521780141639%26client_id%3D1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com%26requestPath%3D/signin/oauth/consent%23&plt=AKgnsbslwBOG6-E58VYzRqd_8IDhz1PGT3S-krVP9f0w6DtheMfvWLTS1ubL0x-ZK1MIKs9xhzWh51e9hRNtAE8wMBPM0PjzFz_4zXgj4MuOdOZhRIUPQFTVBJ-3W6fk7Ea9wZSxT4e6&PersistentCookie=1&service=lso&rart=ANgoxcf8pS-q9cbU-mbRO0kMTJd4P_sbTi-bS9_ZaqgIRWb4HSnmdiD2YZZkHCoOtuGaiTdKiCMT2HR-O5zUafYGXGsj2HNA8CIagdCAyWNjTOBSA9Bj7ls&checkedDomains=youtube&checkConnection=youtube:78&client_id=1062961139910-l2m55cb9h51u5cuc9c56eb3fevouidh9.apps.googleusercontent.com&flowName=GeneralOAuthFlow (0)
+[1513:1513:0927/110948.776012:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110948.776034:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110948.776066:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.audio_input.user_preference_ranking because media.default_audio_capture_device isn't registered or is empty
+[1513:1513:0927/110948.776083:WARNING:chrome/browser/media/prefs/capture_device_ranking.h:256] Can't initialize the value of media.video_input.user_preference_ranking because media.default_video_capture_Device isn't registered or is empty
+[1513:1513:0927/110949.584483:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110949.584527:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110950.019754:INFO:CONSOLE:551] "%c%s color: red; background: yellow; font-size: 24px; WARNING!", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.OAuthUi.en.5V9EEcSV5aU.es5.O/am=SBAAAAAAEAD8N4BgO_C-BlCAAAAAAAAAAACAAQBAEQ/d=1/excm=_b,_tp,attributesview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlE0_lGYNttkgWcEx5xjgCybLAoMlg/dti=1/m=_b,_tp (551)
+[1513:1513:0927/110950.019820:INFO:CONSOLE:551] "%c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand.", source: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.OAuthUi.en.5V9EEcSV5aU.es5.O/am=SBAAAAAAEAD8N4BgO_C-BlCAAAAAAAAAAACAAQBAEQ/d=1/excm=_b,_tp,attributesview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlE0_lGYNttkgWcEx5xjgCybLAoMlg/dti=1/m=_b,_tp (551)
+[1513:1513:0927/110950.090429:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110950.090603:INFO:CONSOLE:138] "Cross-Origin-Opener-Policy policy would block the window.closed call.", source: https://accounts.google.com/gsi/client (138)
+[1513:1513:0927/110952.487599:INFO:CONSOLE:248] "Cross-Origin-Opener-Policy policy would block the window.postMessage call.", source: https://ssl.gstatic.com/_/gsi/_/js/k=gsi.gsi.en_US.EPkq5uimiLE.O/am=AAAAAIIAjC4I/d=1/rs=AF0KOtXP6seXG5nAkXeHA6HZdFuMlCq2GQ/m=transform_layer_library (248)
+[1513:1513:0927/110952.487662:INFO:CONSOLE:248] "Cross-Origin-Opener-Policy policy would block the window.postMessage call.", source: https://ssl.gstatic.com/_/gsi/_/js/k=gsi.gsi.en_US.EPkq5uimiLE.O/am=AAAAAIIAjC4I/d=1/rs=AF0KOtXP6seXG5nAkXeHA6HZdFuMlCq2GQ/m=transform_layer_library (248)
+[1513:1513:0927/110952.601750:INFO:CONSOLE:5] "[REACT_QUERY_CLIENT] QueryClient error: Error: Cloudflare challenge detected, redirecting...", source: https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-datadog-BzMwoDjB.js (5)
+[4041:4062:0927/110952.755018:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/110952.818762:INFO:CONSOLE:0] "No available adapters.", source: https://claude.ai/api/challenge_redirect?to=https%3A%2F%2Fclaude.ai%2Flogin%3FreturnTo%3D%252F%253Futm_source%253Dgoogle_brand%2526utm_campaign%253D%257Bcampaign%257D%2526utm_medium%253Dcpc%2526utm_content%253D823276214377%2526utm_term%253Dclaudeai%2526targetid%253Dkwd-2165710374185%2526gad_source%253D1%2526gad_campaignid%253D23941533550%2526gbraid%253D0AAAAAqwcL8ltsYqiom2AD_v2Dr5R1Hn5O%2526gclid%253DEAIaIQobChMIrJnHsoWPlwMVZG1HAR3V1QU_EAAYASAAEgI7rPD_BwE (0)
+[4041:4063:0927/110952.833335:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4041:4063:0927/110952.833587:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4068:4087:0927/110953.368563:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/110953.401769:INFO:CONSOLE:0] "No available adapters.", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (0)
+[4068:4088:0927/110953.405438:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4068:4088:0927/110953.405588:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[1513:1513:0927/110954.669818:INFO:CONSOLE:1] "OTS parsing error: Size of decompressed WOFF 2.0 is less than compressed size", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.672648:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.677794:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.677898:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.677939:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.677967:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.678013:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.678060:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680052:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680102:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680146:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680352:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680400:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680614:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680661:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680781:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680815:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680899:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.680932:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681036:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681067:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681134:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681213:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681270:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681442:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681568:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681655:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.681711:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110954.683012:INFO:CONSOLE:1] "console.groupEnd", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110955.897112:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/x2gq2/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110956.732480:INFO:CONSOLE:2] "[Cloudflare Turnstile] Cannot find Widget cf-chl-widget-x2gq2, consider using turnstile.remove() to clean up a widget.", source: https://challenges.cloudflare.com/turnstile/v0/b/d76008a69eab/api.js?onload=zaERg6&render=explicit (2)
+[4041:4062:0927/110958.637939:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/110958.670795:INFO:CONSOLE:0] "No available adapters.", source: https://claude.ai/api/challenge_redirect?to=https%3A%2F%2Fclaude.ai%2Flogin%3FreturnTo%3D%252F%253Futm_source%253Dgoogle_brand%2526utm_campaign%253D%257Bcampaign%257D%2526utm_medium%253Dcpc%2526utm_content%253D823276214377%2526utm_term%253Dclaudeai%2526targetid%253Dkwd-2165710374185%2526gad_source%253D1%2526gad_campaignid%253D23941533550%2526gbraid%253D0AAAAAqwcL8ltsYqiom2AD_v2Dr5R1Hn5O%2526gclid%253DEAIaIQobChMIrJnHsoWPlwMVZG1HAR3V1QU_EAAYASAAEgI7rPD_BwE (0)
+[4041:4063:0927/110958.671942:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4041:4063:0927/110958.672424:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4078:4128:0927/110958.961881:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/110958.991142:INFO:CONSOLE:0] "No available adapters.", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (0)
+[4078:4129:0927/110958.994729:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4078:4129:0927/110958.994917:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[1513:1513:0927/110959.590654:INFO:CONSOLE:1] "OTS parsing error: Size of decompressed WOFF 2.0 is less than compressed size", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.983832:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989464:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989530:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989633:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989668:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989755:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.989790:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990065:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990102:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990207:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990244:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990327:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990361:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990437:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990479:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990561:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990599:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990674:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990716:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990782:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990834:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990910:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.990953:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.991090:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.991180:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.991254:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.991304:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/110959.992583:INFO:CONSOLE:1] "console.groupEnd", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111002.136651:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/icqcn/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111003.373767:INFO:CONSOLE:2] "[Cloudflare Turnstile] Cannot find Widget cf-chl-widget-icqcn, consider using turnstile.remove() to clean up a widget.", source: https://challenges.cloudflare.com/turnstile/v0/b/d76008a69eab/api.js?onload=zaERg6&render=explicit (2)
+[4041:4062:0927/111006.837776:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/111006.866769:INFO:CONSOLE:0] "No available adapters.", source: https://claude.ai/api/challenge_redirect?to=https%3A%2F%2Fclaude.ai%2Flogin%3FreturnTo%3D%252F%253Futm_source%253Dgoogle_brand%2526utm_campaign%253D%257Bcampaign%257D%2526utm_medium%253Dcpc%2526utm_content%253D823276214377%2526utm_term%253Dclaudeai%2526targetid%253Dkwd-2165710374185%2526gad_source%253D1%2526gad_campaignid%253D23941533550%2526gbraid%253D0AAAAAqwcL8ltsYqiom2AD_v2Dr5R1Hn5O%2526gclid%253DEAIaIQobChMIrJnHsoWPlwMVZG1HAR3V1QU_EAAYASAAEgI7rPD_BwE (0)
+[4041:4063:0927/111006.868875:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4041:4063:0927/111006.868999:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4119:4165:0927/111007.179260:INFO:third_party/blink/renderer/modules/peerconnection/peer_connection_dependency_factory.cc:955] Running WebRTC with a combined Network and Worker thread.
+[1513:1513:0927/111007.209244:INFO:CONSOLE:0] "No available adapters.", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (0)
+[4119:4166:0927/111007.215426:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4119:4166:0927/111007.215825:INFO:third_party/blink/renderer/platform/p2p/ipc_socket_factory.cc:575] Setting new p2p socket buffer limit to 262144
+[4041:4063:0927/111007.693794:WARNING:third_party/webrtc/media/engine/webrtc_voice_engine.cc:812] Attempting to stop aecdump when no audio processing module is present
+[1513:1513:0927/111008.196251:INFO:CONSOLE:1] "OTS parsing error: Size of decompressed WOFF 2.0 is less than compressed size", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.361953:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.365565:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.365617:INFO:CONSOLE:1] "SGPo1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.365767:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.365829:INFO:CONSOLE:1] "XMexs0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.366110:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.366135:INFO:CONSOLE:1] "[object HTMLAnchorElement]", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367461:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367499:INFO:CONSOLE:1] " : 1", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367655:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367692:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367726:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367755:INFO:CONSOLE:1] " MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367818:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367856:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367904:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.367946:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368015:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368075:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368127:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368162:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368263:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368293:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent MBTMg5: xgZp0", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368402:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368473:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368529:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.368581:INFO:CONSOLE:1] "%c%d font-size:0;color:transparent NaN", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111008.369842:INFO:CONSOLE:1] "console.groupEnd", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111009.908803:INFO:CONSOLE:1] "Error", source: https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/04d7k/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto (1)
+[1513:1513:0927/111010.687104:INFO:CONSOLE:2] "[Cloudflare Turnstile] Cannot find Widget cf-chl-widget-04d7k, consider using turnstile.remove() to clean up a widget.", source: https://challenges.cloudflare.com/turnstile/v0/b/d76008a69eab/api.js?onload=zaERg6&render=explicit (2)
+[1790521833.865][INFO]: [2d4572b275fadffa3b4610b830c1e139] COMMAND Navigate {
+   "url": "https://my.umbc.edu/go/retriever-card"
+}
+[1790521833.869][INFO]: [2d4572b275fadffa3b4610b830c1e139] RESPONSE Navigate ERROR invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=153.0.8010.52)

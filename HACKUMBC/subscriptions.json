@@ -1,0 +1,16 @@
+[
+  {
+    "endpoint": "https://web.push.apple.com/QMxX2amscSG5T6bGP8llNqjxYBvYaIsmCUBojB4-K88NgCUDqRtoeiJd9uuy-Qb6r0lUAoh0t70aXdYyrEeq-euXr81wlu7Hs0f4heUSSE8qYbYjcCR8L76ktHEp53-k1QGAMnxYtkKpVHdanBefB3nqA0btlqM8Aj1VBS_u0mM",
+    "keys": {
+      "p256dh": "BL00gpa5M78poSBgnpIj1CQBCyFqlJopxrA0p5sTt9LYaLzRtGkvxQLWTK9sCh0vVnGkxeruTya4-NDxf5_o5QI",
+      "auth": "mO2MGsBN0AW90u4GDmF5WA"
+    }
+  },
+  {
+    "endpoint": "https://web.push.apple.com/QFWswgaqCjU05frS3E4X8iZK2PmH8McRSEUn7Y6I6HcBNAqWPCOl2Qp0soIyAJzpwR7WnOJV1wZec_qDSDBBVohUw7vY0BbO9E-c_HovQlXQS8DYIYYT2CqZPp0wu1hLPzkpaCWtUfx8keJ4nrYG3i8SYLWFCpddmJU2YTjwWt8",
+    "keys": {
+      "p256dh": "BIQk-kujckxKVqQX83o3wGT6PuRb6G9OvLlN9vKpLDnkgWv6wpkGISFCDcIls1rT4w8Op3P-lxM7XpFcpQ3nLM4",
+      "auth": "gZmTxh7-2JIm50pg1qbeiw"
+    }
+  }
+]

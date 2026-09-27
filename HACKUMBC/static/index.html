@@ -1,0 +1,3184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>True Grit's — Meal Log</title>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0A0A0A">
+
+<style>
+  :root {
+    --bg: #080808;
+    --surface: #111111;
+    --surface-2: #171717;
+    --surface-3: #1D1D1D;
+
+    --line: #292929;
+
+    --gold: #D4AF4A;
+    --gold-bright: #E4C15C;
+    --gold-dark: #8E742E;
+
+    --text: #F2F0EA;
+    --text-soft: #96938A;
+    --text-muted: #625F58;
+
+    --protein: #D4AF4A;
+    --carbs: #9C8953;
+    --fat: #5F5949;
+
+    --radius: 18px;
+    --radius-small: 12px;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  html {
+    background: var(--bg);
+  }
+
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(
+        circle at top,
+        rgba(212, 175, 74, 0.06),
+        transparent 34%
+      ),
+      var(--bg);
+
+    color: var(--text);
+
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    min-height: 100vh;
+  }
+
+
+  button {
+    font: inherit;
+  }
+
+
+  .shell {
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    padding:
+      max(28px, env(safe-area-inset-top))
+      18px
+      calc(120px + env(safe-area-inset-bottom));
+  }
+
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+
+  header {
+    margin-bottom: 26px;
+  }
+
+
+  header h1 {
+    margin: 0;
+
+    font-size: 1.55rem;
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  header p {
+    margin: 7px 0 0;
+
+    color: var(--text-soft);
+
+    font-size: 0.9rem;
+  }
+
+
+  /* ============================================================
+     MAIN NAVIGATION
+     ============================================================ */
+
+  .page-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    padding: 6px;
+
+    margin-bottom: 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+  }
+
+
+  .page-tab {
+    border: 0;
+
+    min-height: 50px;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color: var(--text-soft);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+      background 0.18s ease,
+      color 0.18s ease,
+      transform 0.12s ease;
+  }
+
+
+  .page-tab:active {
+    transform: scale(0.98);
+  }
+
+
+  .page-tab.active {
+    background: var(--gold);
+
+    color: #111;
+
+    box-shadow:
+      0 4px 18px
+      rgba(212, 175, 74, 0.15);
+  }
+
+
+  /* ============================================================
+     PANELS
+     ============================================================ */
+
+  .panel {
+    display: none;
+
+    animation:
+      pageIn 0.18s ease;
+  }
+
+
+  .panel.active {
+    display: block;
+  }
+
+
+  @keyframes pageIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* ============================================================
+     CALORIE HERO
+     ============================================================ */
+
+  .calorie-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        145deg,
+        #171717,
+        #101010
+      );
+
+    border: 1px solid var(--line);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    margin-bottom: 16px;
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+
+
+  .calorie-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -55px;
+    top: -65px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(212, 175, 74, 0.12),
+        transparent 68%
+      );
+
+    pointer-events: none;
+  }
+
+
+  .calorie-label {
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.09em;
+
+    margin-bottom: 5px;
+  }
+
+
+  .calorie-number {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+  }
+
+
+  .calorie-number strong {
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      Monaco,
+      Consolas,
+      monospace;
+
+    font-size: 2.65rem;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: var(--gold-bright);
+
+    font-variant-numeric: tabular-nums;
+  }
+
+
+  .calorie-number span {
+    color: var(--text-soft);
+
+    font-size: 0.95rem;
+  }
+
+
+  /* ============================================================
+     MENU
+     ============================================================ */
+
+  #items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .meal-item {
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius);
+
+    padding: 17px;
+
+    transition:
+      border-color 0.18s ease,
+      background 0.18s ease,
+      transform 0.12s ease;
+  }
+
+
+  .meal-item.active {
+    background:
+      linear-gradient(
+        145deg,
+        #181714,
+        #121212
+      );
+
+    border-color:
+      rgba(212, 175, 74, 0.35);
+  }
+
+
+  .meal-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+  }
+
+
+  .meal-info {
+    flex: 1;
+
+    min-width: 0;
+  }
+
+
+  .meal-name {
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    color: var(--text);
+  }
+
+
+  .meal-desc {
+    margin-top: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+
+    line-height: 1.35;
+  }
+
+
+  .meal-calories {
+    flex: none;
+
+    min-width: 58px;
+
+    text-align: right;
+
+    color: var(--text-soft);
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 0.82rem;
+  }
+
+
+  .meal-item.active .meal-calories {
+    color: var(--gold);
+  }
+
+
+  /* ============================================================
+     STEPPER
+     ============================================================ */
+
+  .stepper {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex: none;
+  }
+
+
+  .stepper-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--line);
+
+    background: var(--surface-2);
+
+    color: var(--text);
+
+    font-size: 1.35rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+      background 0.12s ease,
+      border-color 0.12s ease,
+      color 0.12s ease,
+      transform 0.1s ease;
+  }
+
+
+  .stepper-button:hover {
+    border-color: var(--gold-dark);
+
+    color: var(--gold);
+  }
+
+
+  .stepper-button:active {
+    transform: scale(0.90);
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #111;
+  }
+
+
+  .stepper-quantity {
+    width: 28px;
+
+    text-align: center;
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 1rem;
+
+    color: var(--text-soft);
+
+    font-variant-numeric: tabular-nums;
+  }
+
+
+  .meal-item.active .stepper-quantity {
+    color: var(--gold);
+  }
+
+
+  /* ============================================================
+     ITEM MACROS
+     ============================================================ */
+
+  .macro-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-top: 13px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--text-soft);
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 0.72rem;
+  }
+
+
+  .macro-summary b {
+    color: var(--text);
+
+    font-weight: 500;
+  }
+
+
+  .macro-more {
+    margin-left: auto;
+
+    padding: 5px 8px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+
+    cursor: pointer;
+  }
+
+
+  .macro-more:hover {
+    color: var(--gold);
+  }
+
+
+  .macro-panel {
+    display: none;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 7px 14px;
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--text-soft);
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 0.72rem;
+  }
+
+
+  .macro-panel.open {
+    display: grid;
+  }
+
+
+  .macro-panel div:nth-child(even) {
+    color: var(--text);
+
+    text-align: right;
+  }
+
+
+  /* ============================================================
+     EMPTY STATE
+     ============================================================ */
+
+  .empty-card {
+    padding: 42px 24px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    color: var(--text-soft);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+  }
+
+
+  /* ============================================================
+     MACROS PAGE
+     ============================================================ */
+
+  .macro-card {
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .donut-wrap {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 8px 0 26px;
+  }
+
+
+  .donut {
+    position: relative;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: var(--line);
+
+    box-shadow:
+      0 12px 35px rgba(0, 0, 0, 0.35);
+  }
+
+
+  .donut::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 34px;
+
+    border-radius: 50%;
+
+    background: var(--surface);
+  }
+
+
+  .donut-center {
+    position: absolute;
+
+    inset: 34px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+
+  .donut-cal {
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 2rem;
+
+    color: var(--gold-bright);
+
+    font-variant-numeric: tabular-nums;
+  }
+
+
+  .donut-label {
+    margin-top: 4px;
+
+    color: var(--text-soft);
+
+    font-size: 0.76rem;
+  }
+
+
+  .macro-legend {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 8px;
+  }
+
+
+  .legend-item {
+    padding: 12px 8px;
+
+    background: var(--surface-2);
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    text-align: center;
+  }
+
+
+  .legend-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: var(--text-soft);
+
+    font-size: 0.72rem;
+  }
+
+
+  .legend-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+  }
+
+
+  .legend-value {
+    margin-top: 5px;
+
+    color: var(--text);
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 0.88rem;
+  }
+
+
+  .section-heading {
+    margin: 22px 0 11px;
+
+    color: var(--text-soft);
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  .nutrient-grid {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+  }
+
+
+  .nutrient-grid > div {
+    padding: 14px 15px;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 0.82rem;
+  }
+
+
+  .nutrient-grid > div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+
+  .nutrient-grid > div:nth-child(odd) {
+    color: var(--text-soft);
+  }
+
+
+  .nutrient-grid > div:nth-child(even) {
+    color: var(--text);
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    text-align: right;
+  }
+
+
+  /* ============================================================
+     BOTTOM ACTION BAR
+     ============================================================ */
+
+  footer {
+    position: fixed;
+
+    z-index: 5;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 620px;
+
+    padding:
+      10px
+      18px
+      calc(10px + env(safe-area-inset-bottom));
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(8, 8, 8, 1) 65%,
+        rgba(8, 8, 8, 0)
+      );
+  }
+
+
+  .footer-inner {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr 1.45fr;
+
+    gap: 8px;
+
+    padding: 7px;
+
+    background: rgba(18, 18, 18, 0.96);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 -8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .action-button {
+    min-height: 48px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--line);
+
+    background: var(--surface-2);
+
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+      transform 0.1s ease,
+      background 0.12s ease,
+      color 0.12s ease,
+      border-color 0.12s ease;
+  }
+
+
+  .action-button:active {
+    transform: scale(0.97);
+  }
+
+
+  .action-button:hover {
+    color: var(--text);
+
+    border-color: #3a3a3a;
+  }
+
+
+  .action-button.primary {
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #111;
+  }
+
+
+  .action-button.primary:hover {
+    background: var(--gold-bright);
+
+    border-color: var(--gold-bright);
+  }
+
+
+  /* ============================================================
+     SUMMARY MODAL
+     ============================================================ */
+
+  .modal-backdrop {
+    display: none;
+
+    position: fixed;
+
+    z-index: 20;
+
+    inset: 0;
+
+    padding:
+      20px
+      0
+      env(safe-area-inset-bottom);
+
+    background:
+      rgba(0, 0, 0, 0.78);
+
+    align-items: flex-end;
+
+    justify-content: center;
+  }
+
+
+  .modal-backdrop.open {
+    display: flex;
+  }
+
+
+  .modal {
+    width: 100%;
+
+    max-width: 620px;
+
+    max-height: 86vh;
+
+    overflow-y: auto;
+
+    background: #111;
+
+    border:
+      1px solid var(--line);
+
+    border-radius:
+      24px
+      24px
+      0
+      0;
+
+    padding: 28px 20px 24px;
+
+    box-shadow:
+      0 -15px 50px rgba(0, 0, 0, 0.45);
+  }
+
+
+  .modal h2 {
+    margin: 0;
+
+    font-size: 1.2rem;
+  }
+
+
+  .modal-sub {
+    margin: 6px 0 20px;
+
+    color: var(--text-soft);
+
+    font-size: 0.82rem;
+  }
+
+
+  .summary-total {
+    margin-bottom: 20px;
+
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      monospace;
+
+    font-size: 2.5rem;
+
+    color: var(--gold-bright);
+  }
+
+
+  .summary-total span {
+    color: var(--text-soft);
+
+    font-size: 0.95rem;
+  }
+
+
+  .summary-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 22px 0;
+  }
+
+
+  .summary-list li {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 0.87rem;
+  }
+
+
+  .summary-qty {
+    margin-right: 8px;
+
+    color: var(--text-soft);
+
+    font-family:
+      ui-monospace,
+      monospace;
+  }
+
+
+  .summary-cal {
+    color: var(--text-soft);
+
+    font-family:
+      ui-monospace,
+      monospace;
+  }
+
+
+  .modal-close {
+    width: 100%;
+
+    min-height: 50px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--gold);
+
+    background: transparent;
+
+    color: var(--gold);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+  }
+
+
+  /* ============================================================
+     MOBILE
+     ============================================================ */
+
+  @media (max-width: 430px) {
+
+    .shell {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+
+    .meal-top {
+      gap: 10px;
+    }
+
+
+    .stepper {
+      gap: 5px;
+    }
+
+
+    .stepper-button {
+      width: 40px;
+      height: 40px;
+    }
+
+
+    .meal-calories {
+      min-width: 45px;
+    }
+
+
+    .macro-legend {
+      gap: 6px;
+    }
+
+
+    .legend-item {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+  }
+
+
+  @media (min-width: 600px) {
+
+    .shell {
+      padding-top: 42px;
+    }
+
+
+    .meal-item {
+      padding: 20px;
+    }
+
+
+    .stepper-button {
+      width: 44px;
+      height: 44px;
+    }
+
+  }
+</style>
+</head>
+
+
+<body>
+
+<div class="shell">
+
+  <!-- ==========================================================
+       HEADER
+       =========================================================== -->
+
+  <header>
+    <h1>True Grit's</h1>
+
+    <p id="subtitle">
+      Waiting for your next swipe…
+    </p>
+  </header>
+
+
+  <!-- ==========================================================
+       MAIN PAGE NAVIGATION
+       =========================================================== -->
+
+  <nav class="page-tabs">
+
+    <button
+      id="tab-btn-meal"
+      class="page-tab active"
+      type="button"
+    >
+      Meal
+    </button>
+
+
+    <button
+      id="tab-btn-macros"
+      class="page-tab"
+      type="button"
+    >
+      Macros
+    </button>
+
+  </nav>
+
+
+  <!-- ==========================================================
+       MEAL PAGE
+       =========================================================== -->
+
+  <section
+    id="tab-meal"
+    class="panel active"
+  >
+
+    <div class="calorie-card">
+
+      <div class="calorie-label">
+        Logged so far
+      </div>
+
+      <div class="calorie-number">
+
+        <strong id="total-cal-number">
+          0
+        </strong>
+
+        <span>
+          calories
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <ul id="items"></ul>
+
+  </section>
+
+
+  <!-- ==========================================================
+       MACROS PAGE
+       =========================================================== -->
+
+  <section
+    id="tab-macros"
+    class="panel"
+  >
+
+    <div class="macro-card">
+
+      <div class="donut-wrap">
+
+        <div
+          class="donut"
+          id="donut"
+        >
+
+          <div class="donut-center">
+
+            <div
+              class="donut-cal"
+              id="donut-cal"
+            >
+              0
+            </div>
+
+            <div class="donut-label">
+              calories
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="macro-legend"
+        id="legend"
+      ></div>
+
+    </div>
+
+
+    <h2 class="section-heading">
+      Other nutrients
+    </h2>
+
+
+    <div
+      class="nutrient-grid"
+      id="nutrient-grid"
+    ></div>
+
+  </section>
+
+</div>
+
+
+<!-- ============================================================
+     BOTTOM ACTIONS
+     ============================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <button
+      id="notify-btn"
+      class="action-button"
+      type="button"
+    >
+      Enable alerts
+    </button>
+
+
+    <button
+      id="reset-btn"
+      class="action-button"
+      type="button"
+    >
+      Reset
+    </button>
+
+
+    <button
+      id="end-meal-btn"
+      class="action-button primary"
+      type="button"
+    >
+      End meal
+    </button>
+
+  </div>
+
+</footer>
+
+
+<!-- ============================================================
+     END MEAL MODAL
+     ============================================================= -->
+
+<div
+  class="modal-backdrop"
+  id="summary-backdrop"
+>
+
+  <div class="modal">
+
+    <h2>
+      Meal logged
+    </h2>
+
+
+    <p
+      class="modal-sub"
+      id="summary-sub"
+    ></p>
+
+
+    <div
+      class="summary-total"
+      id="summary-total"
+    >
+      0
+      <span>cal</span>
+    </div>
+
+
+    <div
+      class="macro-legend"
+      id="summary-legend"
+    ></div>
+
+
+    <ul
+      class="summary-list"
+      id="summary-items"
+    ></ul>
+
+
+    <button
+      class="modal-close"
+      id="summary-close"
+      type="button"
+    >
+      Done
+    </button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* ============================================================
+   STATE
+   ============================================================ */
+
+let currentSession = {
+  menu: [],
+  selected: {},
+  total_calories: 0,
+  macro_totals: {}
+};
+
+
+/*
+ * Quantities currently being sent to the backend.
+ *
+ * This prevents the 4-second background refresh from
+ * overwriting a button press while the request is in flight.
+ */
+
+const pendingQuantities = new Map();
+
+
+/* ============================================================
+   ELEMENTS
+   ============================================================ */
+
+const itemsEl =
+  document.getElementById("items");
+
+const totalCalNumberEl =
+  document.getElementById("total-cal-number");
+
+const subtitleEl =
+  document.getElementById("subtitle");
+
+const donutEl =
+  document.getElementById("donut");
+
+const donutCalEl =
+  document.getElementById("donut-cal");
+
+const legendEl =
+  document.getElementById("legend");
+
+const nutrientGridEl =
+  document.getElementById("nutrient-grid");
+
+
+/* ============================================================
+   TABS
+   ============================================================ */
+
+document
+  .getElementById("tab-btn-meal")
+  .addEventListener(
+    "click",
+    () => switchTab("meal")
+  );
+
+
+document
+  .getElementById("tab-btn-macros")
+  .addEventListener(
+    "click",
+    () => switchTab("macros")
+  );
+
+
+function switchTab(name) {
+
+  const meal =
+    name === "meal";
+
+  document
+    .getElementById("tab-btn-meal")
+    .classList.toggle(
+      "active",
+      meal
+    );
+
+
+  document
+    .getElementById("tab-btn-macros")
+    .classList.toggle(
+      "active",
+      !meal
+    );
+
+
+  document
+    .getElementById("tab-meal")
+    .classList.toggle(
+      "active",
+      meal
+    );
+
+
+  document
+    .getElementById("tab-macros")
+    .classList.toggle(
+      "active",
+      !meal
+    );
+
+}
+
+
+/* ============================================================
+   SESSION
+   ============================================================ */
+
+async function fetchSession() {
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/session",
+        {
+          cache: "no-store"
+        }
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        `Session request failed: ${response.status}`
+      );
+
+    }
+
+
+    const serverData =
+      await response.json();
+
+
+    /*
+     * Merge quantities currently being changed locally.
+     *
+     * This is the important part that prevents the
+     * background refresh from making + / – appear broken.
+     */
+
+    const mergedSelected = {
+      ...(serverData.selected || {})
+    };
+
+
+    for (
+      const [name, quantity]
+      of pendingQuantities
+    ) {
+
+      mergedSelected[name] =
+        quantity;
+
+    }
+
+
+    currentSession = {
+      ...serverData,
+
+      selected:
+        mergedSelected
+    };
+
+
+    renderMeal(currentSession);
+
+    renderMacros(currentSession);
+
+  } catch (error) {
+
+    console.error(
+      "Session error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ============================================================
+   MEAL RENDERING
+   ============================================================ */
+
+function renderMeal(data) {
+
+  const menu =
+    Array.isArray(data.menu)
+      ? data.menu
+      : [];
+
+
+  const selected =
+    data.selected || {};
+
+
+  const totalCalories =
+    Number(data.total_calories) || 0;
+
+
+  totalCalNumberEl.textContent =
+    totalCalories;
+
+
+  if (!menu.length) {
+
+    subtitleEl.textContent =
+      "Waiting for your next swipe…";
+
+
+    itemsEl.innerHTML = `
+
+      <div class="empty-card">
+
+        No meal open yet.
+
+        <br>
+
+        Swipe in and check back here.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  subtitleEl.textContent =
+    `${menu.length} item${menu.length === 1 ? "" : "s"} on today's line`;
+
+
+  itemsEl.innerHTML =
+    menu
+      .map(
+        (item, index) => {
+
+          const name =
+            String(item.name || "");
+
+
+          const qty =
+            Number(
+              selected[name] || 0
+            );
+
+
+          const calories =
+            Number(item.calories) || 0;
+
+
+          const lineCalories =
+            qty > 0
+              ? calories * qty
+              : calories;
+
+
+          const macros =
+            item.macros || {};
+
+
+          const macroEntries =
+            Object.entries(macros);
+
+
+          return `
+
+            <li
+              class="meal-item ${qty > 0 ? "active" : ""}"
+              data-name="${escapeAttr(name)}"
+            >
+
+              <div class="meal-top">
+
+
+                <!-- STEPPER -->
+
+                <div
+                  class="stepper"
+                  data-name="${escapeAttr(name)}"
+                >
+
+                  <button
+                    class="stepper-button"
+                    type="button"
+                    data-action="minus"
+                    aria-label="Remove one serving"
+                  >
+                    −
+                  </button>
+
+
+                  <span class="stepper-quantity">
+                    ${qty}
+                  </span>
+
+
+                  <button
+                    class="stepper-button"
+                    type="button"
+                    data-action="plus"
+                    aria-label="Add one serving"
+                  >
+                    +
+                  </button>
+
+                </div>
+
+
+                <!-- FOOD INFO -->
+
+                <div class="meal-info">
+
+                  <div class="meal-name">
+                    ${escapeHtml(name)}
+                  </div>
+
+
+                  <div class="meal-desc">
+
+                    ${
+                      item.description
+                        ? `${escapeHtml(item.description)} · `
+                        : ""
+                    }
+
+                    ${escapeHtml(
+                      item.serving_size || ""
+                    )}
+
+                  </div>
+
+                </div>
+
+
+                <!-- CALORIES -->
+
+                <div class="meal-calories">
+
+                  ${lineCalories}
+
+                  <br>
+
+                  <span
+                    style="
+                      font-size:0.65rem;
+                      color:var(--text-muted);
+                    "
+                  >
+                    cal
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              ${
+                macroEntries.length
+                  ? `
+
+                    <div class="macro-summary">
+
+                      ${buildMacroLine(macros)}
+
+                      <button
+                        class="macro-more"
+                        type="button"
+                        data-action="expand"
+                        data-index="${index}"
+                      >
+                        More ▾
+                      </button>
+
+                    </div>
+
+
+                    <div
+                      class="macro-panel"
+                      id="macro-${index}"
+                    >
+
+                      ${macroEntries
+                        .map(
+                          ([label, value]) => `
+
+                            <div>
+                              ${escapeHtml(label)}
+                            </div>
+
+                            <div>
+                              ${escapeHtml(
+                                String(value)
+                              )}
+                            </div>
+
+                          `
+                        )
+                        .join("")}
+
+                    </div>
+
+                  `
+                  : ""
+              }
+
+            </li>
+
+          `;
+
+        }
+      )
+      .join("");
+
+}
+
+
+/* ============================================================
+   IMPORTANT FIX:
+   EVENT DELEGATION
+   ============================================================ */
+
+/*
+ * We attach ONE click handler to the list itself.
+ *
+ * The list can now be rebuilt every few seconds without
+ * breaking + or −.
+ */
+
+itemsEl.addEventListener(
+  "click",
+  event => {
+
+    const button =
+      event.target.closest(
+        "button[data-action]"
+      );
+
+
+    if (!button) {
+      return;
+    }
+
+
+    const action =
+      button.dataset.action;
+
+
+    /*
+     * Expand/collapse nutrients.
+     */
+
+    if (action === "expand") {
+
+      const index =
+        button.dataset.index;
+
+
+      const panel =
+        document.getElementById(
+          `macro-${index}`
+        );
+
+
+      if (!panel) {
+        return;
+      }
+
+
+      panel.classList.toggle("open");
+
+
+      button.textContent =
+        panel.classList.contains("open")
+          ? "Less ▴"
+          : "More ▾";
+
+
+      return;
+
+    }
+
+
+    /*
+     * Plus / minus.
+     */
+
+    if (
+      action !== "plus" &&
+      action !== "minus"
+    ) {
+
+      return;
+
+    }
+
+
+    const stepper =
+      button.closest(".stepper");
+
+
+    if (!stepper) {
+      return;
+    }
+
+
+    const name =
+      stepper.dataset.name;
+
+
+    const current =
+      pendingQuantities.has(name)
+
+        ? pendingQuantities.get(name)
+
+        : Number(
+            currentSession.selected?.[name] || 0
+          );
+
+
+    let next =
+      current;
+
+
+    if (action === "plus") {
+
+      next =
+        current + 1;
+
+    } else {
+
+      next =
+        Math.max(
+          0,
+          current - 1
+        );
+
+    }
+
+
+    /*
+     * Immediately update local state.
+     */
+
+    pendingQuantities.set(
+      name,
+      next
+    );
+
+
+    currentSession.selected[name] =
+      next;
+
+
+    recalculateLocalSession();
+
+    renderMeal(currentSession);
+
+    renderMacros(currentSession);
+
+
+    /*
+     * Send to backend.
+     */
+
+    updateQuantity(
+      name,
+      next
+    );
+
+  }
+);
+
+
+/* ============================================================
+   QUANTITY UPDATE
+   ============================================================ */
+
+async function updateQuantity(
+  name,
+  quantity
+) {
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/select",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+
+          body:
+            JSON.stringify({
+              name,
+              quantity
+            })
+        }
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        `Select failed: ${response.status}`
+      );
+
+    }
+
+
+    const result =
+      await response.json();
+
+
+    /*
+     * Only remove the pending value if it is still
+     * the same quantity. This matters if the user
+     * taps + several times quickly.
+     */
+
+    if (
+      pendingQuantities.get(name) ===
+      quantity
+    ) {
+
+      pendingQuantities.delete(name);
+
+    }
+
+
+    /*
+     * Use the authoritative totals returned by Flask.
+     */
+
+    if (
+      pendingQuantities.size === 0 &&
+      result.ok
+    ) {
+
+      currentSession.total_calories =
+        Number(
+          result.total_calories || 0
+        );
+
+
+      currentSession.macro_totals =
+        result.macro_totals || {};
+
+
+      renderMeal(currentSession);
+
+      renderMacros(currentSession);
+
+    }
+
+  } catch (error) {
+
+    console.error(
+      "Quantity update failed:",
+      error
+    );
+
+
+    /*
+     * If the request failed, get the real state
+     * from the server.
+     */
+
+    pendingQuantities.delete(name);
+
+    await fetchSession();
+
+  }
+
+}
+
+
+/* ============================================================
+   LOCAL CALORIE RECALCULATION
+   ============================================================ */
+
+function recalculateLocalSession() {
+
+  let calories = 0;
+
+  const macroTotals = {};
+
+
+  for (
+    const item
+    of currentSession.menu || []
+  ) {
+
+    const name =
+      item.name;
+
+
+    const quantity =
+      Number(
+        currentSession.selected?.[name] || 0
+      );
+
+
+    if (!quantity) {
+      continue;
+    }
+
+
+    calories +=
+      (Number(item.calories) || 0)
+      * quantity;
+
+
+    for (
+      const [label, value]
+      of Object.entries(
+        item.macros || {}
+      )
+    ) {
+
+      const number =
+        leadingNumber(value);
+
+
+      if (number === null) {
+        continue;
+      }
+
+
+      macroTotals[label] =
+        (
+          macroTotals[label] || 0
+        )
+        + number * quantity;
+
+    }
+
+  }
+
+
+  currentSession.total_calories =
+    calories;
+
+
+  currentSession.macro_totals =
+    macroTotals;
+
+}
+
+
+/* ============================================================
+   MACRO DISPLAY
+   ============================================================ */
+
+function buildMacroLine(macros) {
+
+  const findMacro =
+    needle => {
+
+      const key =
+        Object.keys(macros)
+          .find(
+            key =>
+              key
+                .toLowerCase()
+                .includes(needle)
+          );
+
+
+      return key
+        ? macros[key]
+        : null;
+
+    };
+
+
+  const parts = [
+
+    [
+      "P",
+      findMacro("protein")
+    ],
+
+    [
+      "C",
+      findMacro("carbohydrate")
+    ],
+
+    [
+      "F",
+      findMacro("total fat")
+    ]
+
+  ]
+  .filter(
+    ([, value]) =>
+      value !== null
+  );
+
+
+  return parts
+    .map(
+      ([label, value]) =>
+        `${label} <b>${escapeHtml(String(value))}</b>`
+    )
+    .join(" · ");
+
+}
+
+
+function findTotal(
+  totals,
+  needle
+) {
+
+  const key =
+    Object.keys(totals)
+      .find(
+        k =>
+          k
+            .toLowerCase()
+            .includes(needle)
+      );
+
+
+  return key
+    ? {
+        key,
+        value:
+          Number(totals[key]) || 0
+      }
+    : null;
+
+}
+
+
+function computeMacroBreakdown(
+  totals
+) {
+
+  const protein =
+    findTotal(
+      totals,
+      "protein"
+    );
+
+
+  const carbs =
+    findTotal(
+      totals,
+      "carbohydrate"
+    );
+
+
+  const fat =
+    findTotal(
+      totals,
+      "total fat"
+    );
+
+
+  const pG =
+    protein?.value || 0;
+
+
+  const cG =
+    carbs?.value || 0;
+
+
+  const fG =
+    fat?.value || 0;
+
+
+  const pCal =
+    pG * 4;
+
+
+  const cCal =
+    cG * 4;
+
+
+  const fCal =
+    fG * 9;
+
+
+  return {
+    protein,
+    carbs,
+    fat,
+
+    pG,
+    cG,
+    fG,
+
+    pCal,
+    cCal,
+    fCal,
+
+    macroCal:
+      pCal +
+      cCal +
+      fCal
+  };
+
+}
+
+
+function renderMacros(data) {
+
+  const totals =
+    data.macro_totals || {};
+
+
+  const breakdown =
+    computeMacroBreakdown(
+      totals
+    );
+
+
+  donutCalEl.textContent =
+    Number(
+      data.total_calories || 0
+    );
+
+
+  if (
+    breakdown.macroCal <= 0
+  ) {
+
+    donutEl.style.background =
+      "var(--line)";
+
+
+    legendEl.innerHTML = `
+
+      <div
+        style="
+          grid-column:1/-1;
+          color:var(--text-soft);
+          text-align:center;
+          padding:8px;
+          font-size:0.8rem;
+        "
+      >
+        Add servings to see your macro breakdown.
+      </div>
+
+    `;
+
+  } else {
+
+    const pPct =
+      (
+        breakdown.pCal /
+        breakdown.macroCal
+      ) * 100;
+
+
+    const cPct =
+      (
+        breakdown.cCal /
+        breakdown.macroCal
+      ) * 100;
+
+
+    donutEl.style.background =
+
+      `conic-gradient(
+        var(--protein)
+        0% ${pPct}%,
+
+        var(--carbs)
+        ${pPct}% ${pPct + cPct}%,
+
+        var(--fat)
+        ${pPct + cPct}% 100%
+      )`;
+
+
+    legendEl.innerHTML =
+      legendHTML(
+        breakdown
+      );
+
+  }
+
+
+  const shownKeys =
+    new Set(
+      [
+        breakdown.protein?.key,
+        breakdown.carbs?.key,
+        breakdown.fat?.key
+      ].filter(Boolean)
+    );
+
+
+  const rest =
+    Object.entries(totals)
+      .filter(
+        ([key]) =>
+          !shownKeys.has(key)
+      );
+
+
+  nutrientGridEl.innerHTML =
+
+    rest.length
+
+      ? rest
+          .map(
+            ([label, value]) => `
+
+              <div>
+                ${escapeHtml(label)}
+              </div>
+
+              <div>
+                ${round1(
+                  Number(value) || 0
+                )}
+              </div>
+
+            `
+          )
+          .join("")
+
+      : `
+
+        <div
+          style="
+            grid-column:1/-1;
+            border-bottom:0;
+            text-align:center;
+            color:var(--text-muted);
+          "
+        >
+          Nothing else logged yet.
+        </div>
+
+      `;
+
+}
+
+
+function legendHTML({
+  pG,
+  cG,
+  fG
+}) {
+
+  return `
+
+    <div class="legend-item">
+
+      <div class="legend-top">
+
+        <span
+          class="legend-dot"
+          style="
+            background:var(--protein)
+          "
+        ></span>
+
+        Protein
+
+      </div>
+
+      <div class="legend-value">
+        ${round1(pG)}g
+      </div>
+
+    </div>
+
+
+    <div class="legend-item">
+
+      <div class="legend-top">
+
+        <span
+          class="legend-dot"
+          style="
+            background:var(--carbs)
+          "
+        ></span>
+
+        Carbs
+
+      </div>
+
+      <div class="legend-value">
+        ${round1(cG)}g
+      </div>
+
+    </div>
+
+
+    <div class="legend-item">
+
+      <div class="legend-top">
+
+        <span
+          class="legend-dot"
+          style="
+            background:var(--fat)
+          "
+        ></span>
+
+        Fat
+
+      </div>
+
+      <div class="legend-value">
+        ${round1(fG)}g
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+document
+  .getElementById("reset-btn")
+  .addEventListener(
+    "click",
+    async () => {
+
+      if (
+        !confirm(
+          "Discard this meal without saving a summary?"
+        )
+      ) {
+
+        return;
+
+      }
+
+
+      try {
+
+        await fetch(
+          "/api/reset",
+          {
+            method: "POST"
+          }
+        );
+
+        pendingQuantities.clear();
+
+        await fetchSession();
+
+      } catch (error) {
+
+        console.error(
+          "Reset failed:",
+          error
+        );
+
+      }
+
+    }
+  );
+
+
+/* ============================================================
+   END MEAL
+   ============================================================ */
+
+document
+  .getElementById("end-meal-btn")
+  .addEventListener(
+    "click",
+    async () => {
+
+      try {
+
+        const response =
+          await fetch(
+            "/api/end-meal",
+            {
+              method: "POST"
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `End meal failed: ${response.status}`
+          );
+
+        }
+
+
+        const summary =
+          await response.json();
+
+
+        pendingQuantities.clear();
+
+
+        showSummary(
+          summary
+        );
+
+
+        await fetchSession();
+
+      } catch (error) {
+
+        console.error(
+          "End meal failed:",
+          error
+        );
+
+      }
+
+    }
+  );
+
+
+function showSummary(summary) {
+
+  const items =
+    summary.items || [];
+
+
+  const totalCalories =
+    Number(
+      summary.total_calories || 0
+    );
+
+
+  const macroTotals =
+    summary.macro_totals || {};
+
+
+  document
+    .getElementById("summary-sub")
+    .textContent =
+      items.length
+
+        ? `${items.length} item${
+            items.length === 1
+              ? ""
+              : "s"
+          } logged`
+
+        : "Nothing was logged this meal.";
+
+
+  document
+    .getElementById("summary-total")
+    .innerHTML =
+      `${totalCalories} <span>cal</span>`;
+
+
+  const breakdown =
+    computeMacroBreakdown(
+      macroTotals
+    );
+
+
+  document
+    .getElementById("summary-legend")
+    .innerHTML =
+      breakdown.macroCal > 0
+        ? legendHTML(
+            breakdown
+          )
+        : "";
+
+
+  document
+    .getElementById("summary-items")
+    .innerHTML =
+      items
+        .map(
+          item => `
+
+            <li>
+
+              <span>
+
+                <span class="summary-qty">
+                  ${item.quantity}×
+                </span>
+
+                ${escapeHtml(
+                  item.name
+                )}
+
+              </span>
+
+              <span class="summary-cal">
+                ${item.calories} cal
+              </span>
+
+            </li>
+
+          `
+        )
+        .join("");
+
+
+  document
+    .getElementById("summary-backdrop")
+    .classList.add("open");
+
+}
+
+
+document
+  .getElementById("summary-close")
+  .addEventListener(
+    "click",
+    () => {
+
+      document
+        .getElementById("summary-backdrop")
+        .classList.remove("open");
+
+    }
+  );
+
+
+/*
+ * Also allow tapping the dark area to close.
+ */
+
+document
+  .getElementById("summary-backdrop")
+  .addEventListener(
+    "click",
+    event => {
+
+      if (
+        event.target.id ===
+        "summary-backdrop"
+      ) {
+
+        event.currentTarget
+          .classList.remove("open");
+
+      }
+
+    }
+  );
+
+
+/* ============================================================
+   PUSH NOTIFICATIONS
+   ============================================================ */
+
+function urlBase64ToUint8Array(base64) {
+
+  const padding =
+    "=".repeat(
+      (4 - base64.length % 4) % 4
+    );
+
+
+  const base64Safe =
+    (
+      base64 + padding
+    )
+      .replace(
+        /-/g,
+        "+"
+      )
+      .replace(
+        /_/g,
+        "/"
+      );
+
+
+  const raw =
+    atob(base64Safe);
+
+
+  return Uint8Array.from(
+    [...raw].map(
+      c =>
+        c.charCodeAt(0)
+    )
+  );
+
+}
+
+
+async function enablePushNotifications() {
+
+  try {
+
+    if (!window.isSecureContext) {
+
+      throw new Error(
+        "Push requires HTTPS. Open the app using your HTTPS URL."
+      );
+
+    }
+
+
+    if (
+      !("serviceWorker" in navigator)
+    ) {
+
+      throw new Error(
+        "Service workers are not supported by this browser."
+      );
+
+    }
+
+
+    if (
+      !("PushManager" in window)
+    ) {
+
+      throw new Error(
+        "Push notifications are not supported by this browser."
+      );
+
+    }
+
+
+    const registration =
+      await navigator.serviceWorker.register(
+        "/sw.js"
+      );
+
+
+    await navigator.serviceWorker.ready;
+
+
+    let permission =
+      Notification.permission;
+
+
+    if (
+      permission !== "granted"
+    ) {
+
+      permission =
+        await Notification.requestPermission();
+
+    }
+
+
+    if (
+      permission !== "granted"
+    ) {
+
+      throw new Error(
+        "Notification permission was not granted."
+      );
+
+    }
+
+
+    const keyResponse =
+      await fetch(
+        "/vapid-public-key"
+      );
+
+
+    if (!keyResponse.ok) {
+
+      throw new Error(
+        `VAPID key request failed: ${keyResponse.status}`
+      );
+
+    }
+
+
+    const keyData =
+      await keyResponse.json();
+
+
+    if (!keyData.key) {
+
+      throw new Error(
+        "Server returned no VAPID public key."
+      );
+
+    }
+
+
+    const applicationServerKey =
+      urlBase64ToUint8Array(
+        keyData.key
+      );
+
+
+    let subscription =
+      await registration
+        .pushManager
+        .getSubscription();
+
+
+    if (!subscription) {
+
+      subscription =
+        await registration
+          .pushManager
+          .subscribe({
+
+            userVisibleOnly:
+              true,
+
+            applicationServerKey
+
+          });
+
+    }
+
+
+    const saveResponse =
+      await fetch(
+        "/api/subscribe",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+
+          body:
+            JSON.stringify(
+              subscription
+            )
+        }
+      );
+
+
+    const result =
+      await saveResponse.json();
+
+
+    if (
+      !saveResponse.ok ||
+      !result.ok
+    ) {
+
+      throw new Error(
+        result.error ||
+        "Server rejected push subscription."
+      );
+
+    }
+
+
+    document
+      .getElementById("notify-btn")
+      .textContent =
+        "Alerts on";
+
+
+    alert(
+      "Push notifications are enabled."
+    );
+
+  } catch (error) {
+
+    console.error(
+      "[Push] Setup failed:",
+      error
+    );
+
+
+    alert(
+      "Push notification setup failed:\n\n" +
+      error.message
+    );
+
+  }
+
+}
+
+
+document
+  .getElementById("notify-btn")
+  .addEventListener(
+    "click",
+    enablePushNotifications
+  );
+
+
+/* ============================================================
+   SERVICE WORKER
+   ============================================================ */
+
+if (
+  "serviceWorker" in navigator
+) {
+
+  window.addEventListener(
+    "load",
+    async () => {
+
+      try {
+
+        const registration =
+          await navigator.serviceWorker.register(
+            "/sw.js"
+          );
+
+
+        console.log(
+          "[SW] Registered:",
+          registration.scope
+        );
+
+      } catch (error) {
+
+        console.error(
+          "[SW] Registration failed:",
+          error
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+
+function leadingNumber(value) {
+
+  if (
+    value === null ||
+    value === undefined
+  ) {
+
+    return null;
+
+  }
+
+
+  const match =
+    String(value)
+      .trim()
+      .match(
+        /^-?\d+(?:\.\d+)?/
+      );
+
+
+  if (!match) {
+
+    return null;
+
+  }
+
+
+  const number =
+    Number(match[0]);
+
+
+  return Number.isFinite(number)
+    ? number
+    : null;
+
+}
+
+
+function round1(number) {
+
+  return Math.round(
+    number * 10
+  ) / 10;
+
+}
+
+
+function escapeHtml(value) {
+
+  return String(
+    value ?? ""
+  )
+    .replace(
+      /[&<>"]/g,
+      character =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;"
+        }[character])
+    );
+
+}
+
+
+function escapeAttr(value) {
+
+  return escapeHtml(value);
+
+}
+
+
+/* ============================================================
+   INITIAL LOAD
+   ============================================================ */
+
+fetchSession();
+
+
+/*
+ * Keep checking for a new swipe.
+ *
+ * Because + / − use event delegation and pendingQuantities,
+ * this refresh can no longer destroy their functionality.
+ */
+
+setInterval(
+  () => {
+
+    /*
+     * Don't refresh the server state while the user has
+     * outstanding quantity changes.
+     */
+
+    if (
+      pendingQuantities.size === 0
+    ) {
+
+      fetchSession();
+
+    }
+
+  },
+  4000
+);
+
+</script>
+
+</body>
+</html>
